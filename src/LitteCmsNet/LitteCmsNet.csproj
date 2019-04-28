@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Alexander Mehling</Authors>
+    <Version>0.1.0</Version>
+    <Company />
+    <Copyright>(c) 2019 Alexander Mehling</Copyright>
+    <Platforms>AnyCPU</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="runtimes\linux-x64\native\lcms2.so" />
+    <None Remove="runtimes\win-x64\native\lcms2.dll" />
+    <None Remove="runtimes\win-x86\native\lcms2.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+		<Content Include="runtimes\linux-x64\native\lcms2.so">
+			<PackagePath>/runtimes/linux-x64/native/</PackagePath>
+		</Content>
+    <Content Include="runtimes\win-x64\native\lcms2.dll">
+			<PackagePath>/runtimes/win-x64/native/</PackagePath>
+    </Content>
+		<Content Include="runtimes\win-x86\native\lcms2.dll">
+			<PackagePath>/runtimes/win-x86/native/</PackagePath>
+		</Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.2" />
+  </ItemGroup>
+
+</Project>

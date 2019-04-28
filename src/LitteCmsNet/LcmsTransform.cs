@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace LitteCmsNet
 {
-	public class LcmsTransform : IDisposable
+	public class LcmsTransform<S, T> : IDisposable
+		where S : struct
+		where T : struct
 	{
 
 		private readonly IntPtr ptr;
@@ -27,10 +30,17 @@ namespace LitteCmsNet
 
 		public LcmsFlags Flags { get; }
 
-		public static LcmsTransform Create(LcmsProfile input, LcmsFormat inputFormat, LcmsProfile output, LcmsFormat outputFormat, LcmsRenderingIntent intent, LcmsFlags dwFlags)
+		public static LcmsTransform<S, T> Create(LcmsProfile input, LcmsProfile output, LcmsRenderingIntent intent = LcmsRenderingIntent.PERCEPTUAL, LcmsFlags dwFlags = LcmsFlags.NONE)
+		{
+			LcmsFormat inputFormat = input.CreateFormatterForColorspaceOfProfile<S>();
+			LcmsFormat outputFormat = output.CreateFormatterForColorspaceOfProfile<T>();
+			return Create(input, inputFormat, output, outputFormat, intent, dwFlags);
+		}
+
+		public static LcmsTransform<S, T> Create(LcmsProfile input, LcmsFormat inputFormat, LcmsProfile output, LcmsFormat outputFormat, LcmsRenderingIntent intent = LcmsRenderingIntent.PERCEPTUAL, LcmsFlags dwFlags = LcmsFlags.NONE)
 		{
 			IntPtr ptr = lcms2.CmsCreateTransform(input.Handle, inputFormat.Flags, output.Handle, outputFormat.Flags, (uint)intent, (uint)dwFlags);
-			return new LcmsTransform(ptr, intent, dwFlags);
+			return new LcmsTransform<S, T>(ptr, intent, dwFlags);
 		}
 
 		public LcmsFormat InputFormat
@@ -43,14 +53,21 @@ namespace LitteCmsNet
 			get { return new LcmsFormat(lcms2.CmsGetTransformOutputFormat(ptr)); }
 		}
 
-		public unsafe void Transform(Span<float> input, Span<float> output)
+		public unsafe void Transform(Span<S> input, Span<T> output)
 		{
-			uint length = (uint)input.Length / InputFormat.Channels;
-			fixed (float* inPtr = input)
+			uint inputLen = (uint)input.Length / InputFormat.Channels;
+			uint outputLen = (uint)output.Length / OutputFormat.Channels;
+			if (inputLen != outputLen)
 			{
-				fixed (float* outPtr = output)
+				throw new Exception($"Number of input and output samples do not match: {inputLen} != {outputLen}");
+			}
+			Span<byte> x = MemoryMarshal.Cast<S, byte>(input);
+			Span<byte> y = MemoryMarshal.Cast<T, byte>(output);
+			fixed (void* inPtr = x)
+			{
+				fixed (void* outPtr = y)
 				{
-					lcms2.CmsDoTransform(ptr, (IntPtr)inPtr, (IntPtr)outPtr, length);
+					lcms2.CmsDoTransform(ptr, (IntPtr)inPtr, (IntPtr)outPtr, inputLen);
 				}
 			}
 		}

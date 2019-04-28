@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace LitteCmsNet
 {
@@ -83,6 +84,29 @@ namespace LitteCmsNet
 			{
 				return new string(buffer, 0, (int)err);
 			}
+		}
+
+		private static bool IsFloat<X>() where X : struct
+		{
+			if (typeof(X) == typeof(float) || typeof(X) == typeof(double))
+			{
+				return true;
+			}
+			if (typeof(X) == typeof(byte) || typeof(X) == typeof(ushort))
+			{
+				return false;
+			}
+			throw new Exception($"Invalid color conversion data type {typeof(X).Name}. Allowed are: byte, ushort, float, double");
+		}
+
+		public LcmsFormat CreateFormatterForColorspaceOfProfile<X>() where X : struct
+		{
+			bool isFloat = IsFloat<X>();
+			uint bytesPerChannel = (uint)Marshal.SizeOf<X>();
+			if (bytesPerChannel == 8) bytesPerChannel = 0; // avoid overflow
+			uint flags = lcms2.CmsFormatterForColorspaceOfProfile(this.Handle, bytesPerChannel, isFloat ? 1 : 0);
+			LcmsFormat format = new LcmsFormat(flags);
+			return format;
 		}
 
 		public void Dispose()

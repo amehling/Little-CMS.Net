@@ -1,6 +1,6 @@
 ﻿namespace LitteCmsNet
 {
-	public class LcmsFormat
+	public struct LcmsFormat
 	{
 		private const uint A = 0b1_0_00000_0_0_0_0_0_0_000_0000_000;
 		private const uint O = 0b0_1_00000_0_0_0_0_0_0_000_0000_000;
@@ -15,16 +15,12 @@
 		private const uint C = 0b0_0_00000_0_0_0_0_0_0_000_1111_000;
 		private const uint B = 0b0_0_00000_0_0_0_0_0_0_000_0000_111;
 
-		public LcmsFormat(uint flags)
+		public LcmsFormat(uint flags = 0)
 		{
 			this.Flags = flags;
 		}
 
-		public LcmsFormat() : this(0)
-		{
-		}
-
-		public uint Flags { get; set; }
+		public uint Flags { get; private set; }
 
 		public bool FloatingPoint
 		{

@@ -5,7 +5,7 @@ namespace LitteCmsNet.Demo
 	class Program
 	{
 
-		static void PrintColor(Span<float> color)
+		static void PrintColor<T>(Span<T> color)
 		{
 			foreach(var c in color)
 			{
@@ -31,24 +31,10 @@ namespace LitteCmsNet.Demo
 				//using (LcmsProfile rgb = LcmsProfile.Load("sRGB Color Space Profile.icm"))
 				using (LcmsProfile rgb = LcmsProfile.CreateSRGBProfile())
 				{
-					LcmsFormat cmykFormat = new LcmsFormat()
+					using (LcmsTransform<double, byte> trans = LcmsTransform<double, byte>.Create(cmyk, rgb))
 					{
-						FloatingPoint = true,
-						BytesPerChannel = sizeof(float),
-						Channels = cmyk.Channels,
-						PixelType = LcmsPixelType.CMYK,
-					};
-					LcmsFormat rgbFormat = new LcmsFormat()
-					{
-						FloatingPoint = true,
-						BytesPerChannel = sizeof(float),
-						Channels = rgb.Channels,
-						PixelType = LcmsPixelType.RGB,
-					};
-					using (LcmsTransform trans = LcmsTransform.Create(cmyk, cmykFormat, rgb, rgbFormat, LcmsRenderingIntent.PERCEPTUAL, LcmsFlags.NONE))
-					{
-						float[] cmykColor = new float[] { 0.0f, 100f, 0f, 0.0f };
-						Span<float> rgbColor = stackalloc float[3];
+						Span<double> cmykColor = new double[] { 0.0f, 50f, 0f, 50.0f };
+						Span<byte> rgbColor = stackalloc byte[3];
 						trans.Transform(cmykColor, rgbColor);
 						PrintColor(cmykColor);
 						PrintColor(rgbColor);

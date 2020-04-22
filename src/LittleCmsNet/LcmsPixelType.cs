@@ -1,4 +1,4 @@
-﻿namespace LitteCmsNet
+﻿namespace LittleCmsNet
 {
 	/// <summary>
 	/// Pixel types

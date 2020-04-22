@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LitteCmsNet
+namespace LittleCmsNet
 {
 	[Flags]
 	public enum LcmsFlags : uint

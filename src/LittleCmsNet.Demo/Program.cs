@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LitteCmsNet.Demo
+namespace LittleCmsNet.Demo
 {
 	class Program
 	{

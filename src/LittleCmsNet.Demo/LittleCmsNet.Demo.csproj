@@ -10,13 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\LitteCmsNet\runtimes\win-x64\native\lcms2.dll" Link="lcms2.dll">
+    <None Include="..\LittleCmsNet\runtimes\win-x64\native\lcms2.dll" Link="lcms2.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LitteCmsNet\LitteCmsNet.csproj" />
+    <ProjectReference Include="..\LittleCmsNet\LittleCmsNet.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace LitteCmsNet
+﻿namespace LittleCmsNet
 {
 	public static class CmsColorSpaceSignatureExtensions
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace LitteCmsNet
+namespace LittleCmsNet
 {
 	public class LcmsTransform<S, T> : IDisposable
 		where S : struct

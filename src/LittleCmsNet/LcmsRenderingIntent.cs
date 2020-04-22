@@ -1,4 +1,4 @@
-﻿namespace LitteCmsNet
+﻿namespace LittleCmsNet
 {
 	public enum LcmsRenderingIntent : uint
 	{

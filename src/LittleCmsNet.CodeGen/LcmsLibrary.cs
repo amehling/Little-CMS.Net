@@ -2,7 +2,7 @@
 using CppSharp.AST;
 using CppSharp.Generators;
 
-namespace LitteCmsNet.CodeGen
+namespace LittleCmsNet.CodeGen
 {
 	public class LcmsLibrary : ILibrary
 	{
@@ -11,10 +11,10 @@ namespace LitteCmsNet.CodeGen
 			DriverOptions options = driver.Options;
 			options.GeneratorKind = GeneratorKind.CSharp;
 			Module module = options.AddModule("lcms2");
-			module.OutputNamespace = "LitteCmsNet";
-			module.IncludeDirs.Add(@"..\..\..\LitteCmsNet\runtimes\win-x64\native");
+			module.OutputNamespace = "LittleCmsNet";
+			module.IncludeDirs.Add(@"..\..\..\LittleCmsNet\runtimes\win-x64\native");
 			module.Headers.Add("lcms2.h");
-			module.LibraryDirs.Add(@"..\..\..\LitteCmsNet\runtimes\win-x64\native");
+			module.LibraryDirs.Add(@"..\..\..\LittleCmsNet\runtimes\win-x64\native");
 			module.Libraries.Add("lcms2.dll");
 		}
 

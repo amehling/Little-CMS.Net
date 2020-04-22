@@ -1,7 +1,7 @@
 ﻿using CppSharp;
 using System;
 
-namespace LitteCmsNet.CodeGen
+namespace LittleCmsNet.CodeGen
 {
 	class Program
 	{

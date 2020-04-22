@@ -8,7 +8,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace LitteCmsNet
+namespace LittleCmsNet
 {
     public enum CmsTagTypeSignature
     {
@@ -302,29 +302,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCData> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCData>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCData> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCData>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsICCData __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCData __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCData(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsICCData(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsICCData __CreateInstance(global::LitteCmsNet.CmsICCData.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCData __CreateInstance(global::LittleCmsNet.CmsICCData.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCData(native, skipVTables);
+            return new global::LittleCmsNet.CmsICCData(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsICCData.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsICCData.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCData.__Internal));
-            *(global::LitteCmsNet.CmsICCData.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCData.__Internal));
+            *(global::LittleCmsNet.CmsICCData.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsICCData(global::LitteCmsNet.CmsICCData.__Internal native, bool skipVTables = false)
+        private CmsICCData(global::LittleCmsNet.CmsICCData.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -340,17 +340,17 @@ namespace LitteCmsNet
 
         public CmsICCData()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCData.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCData.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsICCData(global::LitteCmsNet.CmsICCData _0)
+        public CmsICCData(global::LittleCmsNet.CmsICCData _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCData.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCData.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsICCData.__Internal*) __Instance) = *((global::LitteCmsNet.CmsICCData.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsICCData.__Internal*) __Instance) = *((global::LittleCmsNet.CmsICCData.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -362,7 +362,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsICCData __dummy;
+            global::LittleCmsNet.CmsICCData __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -373,12 +373,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCData.__Internal*) __Instance)->len;
+                return ((global::LittleCmsNet.CmsICCData.__Internal*) __Instance)->len;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCData.__Internal*)__Instance)->len = value;
+                ((global::LittleCmsNet.CmsICCData.__Internal*)__Instance)->len = value;
             }
         }
 
@@ -386,12 +386,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCData.__Internal*) __Instance)->flag;
+                return ((global::LittleCmsNet.CmsICCData.__Internal*) __Instance)->flag;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCData.__Internal*)__Instance)->flag = value;
+                ((global::LittleCmsNet.CmsICCData.__Internal*)__Instance)->flag = value;
             }
         }
 
@@ -400,11 +400,11 @@ namespace LitteCmsNet
             get
             {
                 byte[] __value = null;
-                if (((global::LitteCmsNet.CmsICCData.__Internal*) __Instance)->data != null)
+                if (((global::LittleCmsNet.CmsICCData.__Internal*) __Instance)->data != null)
                 {
                     __value = new byte[1];
                     for (int i = 0; i < 1; i++)
-                        __value[i] = ((global::LitteCmsNet.CmsICCData.__Internal*) __Instance)->data[i];
+                        __value[i] = ((global::LittleCmsNet.CmsICCData.__Internal*) __Instance)->data[i];
                 }
                 return __value;
             }
@@ -414,7 +414,7 @@ namespace LitteCmsNet
                 if (value != null)
                 {
                     for (int i = 0; i < 1; i++)
-                        ((global::LitteCmsNet.CmsICCData.__Internal*)__Instance)->data[i] = value[i];
+                        ((global::LittleCmsNet.CmsICCData.__Internal*)__Instance)->data[i] = value[i];
                 }
             }
         }
@@ -430,29 +430,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsContextStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsContextStruct>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsContextStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsContextStruct>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsContextStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsContextStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsContextStruct(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsContextStruct(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsContextStruct __CreateInstance(global::LitteCmsNet.CmsContextStruct.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsContextStruct __CreateInstance(global::LittleCmsNet.CmsContextStruct.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsContextStruct(native, skipVTables);
+            return new global::LittleCmsNet.CmsContextStruct(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsContextStruct.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsContextStruct.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsContextStruct.__Internal));
-            *(global::LitteCmsNet.CmsContextStruct.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsContextStruct.__Internal));
+            *(global::LittleCmsNet.CmsContextStruct.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsContextStruct(global::LitteCmsNet.CmsContextStruct.__Internal native, bool skipVTables = false)
+        private CmsContextStruct(global::LittleCmsNet.CmsContextStruct.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -477,29 +477,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCurveStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCurveStruct>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCurveStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCurveStruct>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCurveStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCurveStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCurveStruct(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCurveStruct(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCurveStruct __CreateInstance(global::LitteCmsNet.CmsCurveStruct.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCurveStruct __CreateInstance(global::LittleCmsNet.CmsCurveStruct.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCurveStruct(native, skipVTables);
+            return new global::LittleCmsNet.CmsCurveStruct(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCurveStruct.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCurveStruct.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCurveStruct.__Internal));
-            *(global::LitteCmsNet.CmsCurveStruct.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCurveStruct.__Internal));
+            *(global::LittleCmsNet.CmsCurveStruct.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCurveStruct(global::LitteCmsNet.CmsCurveStruct.__Internal native, bool skipVTables = false)
+        private CmsCurveStruct(global::LittleCmsNet.CmsCurveStruct.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -524,29 +524,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsPipelineStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsPipelineStruct>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsPipelineStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsPipelineStruct>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsPipelineStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsPipelineStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsPipelineStruct(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsPipelineStruct(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsPipelineStruct __CreateInstance(global::LitteCmsNet.CmsPipelineStruct.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsPipelineStruct __CreateInstance(global::LittleCmsNet.CmsPipelineStruct.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsPipelineStruct(native, skipVTables);
+            return new global::LittleCmsNet.CmsPipelineStruct(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsPipelineStruct.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsPipelineStruct.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsPipelineStruct.__Internal));
-            *(global::LitteCmsNet.CmsPipelineStruct.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsPipelineStruct.__Internal));
+            *(global::LittleCmsNet.CmsPipelineStruct.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsPipelineStruct(global::LitteCmsNet.CmsPipelineStruct.__Internal native, bool skipVTables = false)
+        private CmsPipelineStruct(global::LittleCmsNet.CmsPipelineStruct.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -571,29 +571,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsStageStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsStageStruct>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsStageStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsStageStruct>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsStageStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsStageStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsStageStruct(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsStageStruct(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsStageStruct __CreateInstance(global::LitteCmsNet.CmsStageStruct.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsStageStruct __CreateInstance(global::LittleCmsNet.CmsStageStruct.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsStageStruct(native, skipVTables);
+            return new global::LittleCmsNet.CmsStageStruct(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsStageStruct.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsStageStruct.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsStageStruct.__Internal));
-            *(global::LitteCmsNet.CmsStageStruct.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsStageStruct.__Internal));
+            *(global::LittleCmsNet.CmsStageStruct.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsStageStruct(global::LitteCmsNet.CmsStageStruct.__Internal native, bool skipVTables = false)
+        private CmsStageStruct(global::LittleCmsNet.CmsStageStruct.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -618,29 +618,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsMLU_struct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsMLU_struct>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsMLU_struct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsMLU_struct>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsMLU_struct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsMLU_struct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsMLU_struct(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsMLU_struct(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsMLU_struct __CreateInstance(global::LitteCmsNet.CmsMLU_struct.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsMLU_struct __CreateInstance(global::LittleCmsNet.CmsMLU_struct.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsMLU_struct(native, skipVTables);
+            return new global::LittleCmsNet.CmsMLU_struct(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsMLU_struct.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsMLU_struct.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsMLU_struct.__Internal));
-            *(global::LitteCmsNet.CmsMLU_struct.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsMLU_struct.__Internal));
+            *(global::LittleCmsNet.CmsMLU_struct.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsMLU_struct(global::LitteCmsNet.CmsMLU_struct.__Internal native, bool skipVTables = false)
+        private CmsMLU_struct(global::LittleCmsNet.CmsMLU_struct.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -665,29 +665,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsNAMEDCOLORLIST_struct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsNAMEDCOLORLIST_struct>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsNAMEDCOLORLIST_struct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsNAMEDCOLORLIST_struct>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsNAMEDCOLORLIST_struct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsNAMEDCOLORLIST_struct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsNAMEDCOLORLIST_struct(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsNAMEDCOLORLIST_struct(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsNAMEDCOLORLIST_struct __CreateInstance(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsNAMEDCOLORLIST_struct __CreateInstance(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsNAMEDCOLORLIST_struct(native, skipVTables);
+            return new global::LittleCmsNet.CmsNAMEDCOLORLIST_struct(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__Internal));
-            *(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__Internal));
+            *(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsNAMEDCOLORLIST_struct(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__Internal native, bool skipVTables = false)
+        private CmsNAMEDCOLORLIST_struct(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -712,29 +712,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsIoHandler> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsIoHandler>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsIoHandler> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsIoHandler>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsIoHandler __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsIoHandler __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsIoHandler(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsIoHandler(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsIoHandler __CreateInstance(global::LitteCmsNet.CmsIoHandler.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsIoHandler __CreateInstance(global::LittleCmsNet.CmsIoHandler.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsIoHandler(native, skipVTables);
+            return new global::LittleCmsNet.CmsIoHandler(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsIoHandler.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsIoHandler.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsIoHandler.__Internal));
-            *(global::LitteCmsNet.CmsIoHandler.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsIoHandler.__Internal));
+            *(global::LittleCmsNet.CmsIoHandler.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsIoHandler(global::LitteCmsNet.CmsIoHandler.__Internal native, bool skipVTables = false)
+        private CmsIoHandler(global::LittleCmsNet.CmsIoHandler.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -781,29 +781,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsDateTimeNumber> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsDateTimeNumber>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsDateTimeNumber> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsDateTimeNumber>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsDateTimeNumber __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsDateTimeNumber __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsDateTimeNumber(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsDateTimeNumber(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsDateTimeNumber __CreateInstance(global::LitteCmsNet.CmsDateTimeNumber.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsDateTimeNumber __CreateInstance(global::LittleCmsNet.CmsDateTimeNumber.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsDateTimeNumber(native, skipVTables);
+            return new global::LittleCmsNet.CmsDateTimeNumber(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsDateTimeNumber.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsDateTimeNumber.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsDateTimeNumber.__Internal));
-            *(global::LitteCmsNet.CmsDateTimeNumber.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsDateTimeNumber.__Internal));
+            *(global::LittleCmsNet.CmsDateTimeNumber.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsDateTimeNumber(global::LitteCmsNet.CmsDateTimeNumber.__Internal native, bool skipVTables = false)
+        private CmsDateTimeNumber(global::LittleCmsNet.CmsDateTimeNumber.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -819,17 +819,17 @@ namespace LitteCmsNet
 
         public CmsDateTimeNumber()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsDateTimeNumber.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsDateTimeNumber.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsDateTimeNumber(global::LitteCmsNet.CmsDateTimeNumber _0)
+        public CmsDateTimeNumber(global::LittleCmsNet.CmsDateTimeNumber _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsDateTimeNumber.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsDateTimeNumber.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) __Instance) = *((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) __Instance) = *((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -841,7 +841,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsDateTimeNumber __dummy;
+            global::LittleCmsNet.CmsDateTimeNumber __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -852,12 +852,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->year;
+                return ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->year;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->year = value;
+                ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->year = value;
             }
         }
 
@@ -865,12 +865,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->month;
+                return ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->month;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->month = value;
+                ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->month = value;
             }
         }
 
@@ -878,12 +878,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->day;
+                return ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->day;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->day = value;
+                ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->day = value;
             }
         }
 
@@ -891,12 +891,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->hours;
+                return ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->hours;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->hours = value;
+                ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->hours = value;
             }
         }
 
@@ -904,12 +904,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->minutes;
+                return ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->minutes;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->minutes = value;
+                ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->minutes = value;
             }
         }
 
@@ -917,12 +917,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->seconds;
+                return ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*) __Instance)->seconds;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->seconds = value;
+                ((global::LittleCmsNet.CmsDateTimeNumber.__Internal*)__Instance)->seconds = value;
             }
         }
     }
@@ -950,29 +950,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsEncodedXYZNumber> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsEncodedXYZNumber>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsEncodedXYZNumber> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsEncodedXYZNumber>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsEncodedXYZNumber __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsEncodedXYZNumber __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsEncodedXYZNumber(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsEncodedXYZNumber(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsEncodedXYZNumber __CreateInstance(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsEncodedXYZNumber __CreateInstance(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsEncodedXYZNumber(native, skipVTables);
+            return new global::LittleCmsNet.CmsEncodedXYZNumber(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal));
-            *(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal));
+            *(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsEncodedXYZNumber(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal native, bool skipVTables = false)
+        private CmsEncodedXYZNumber(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -988,17 +988,17 @@ namespace LitteCmsNet
 
         public CmsEncodedXYZNumber()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsEncodedXYZNumber(global::LitteCmsNet.CmsEncodedXYZNumber _0)
+        public CmsEncodedXYZNumber(global::LittleCmsNet.CmsEncodedXYZNumber _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance) = *((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance) = *((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -1010,7 +1010,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsEncodedXYZNumber __dummy;
+            global::LittleCmsNet.CmsEncodedXYZNumber __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -1021,12 +1021,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance)->X;
+                return ((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance)->X;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*)__Instance)->X = value;
+                ((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*)__Instance)->X = value;
             }
         }
 
@@ -1034,12 +1034,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance)->Y;
+                return ((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance)->Y;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*)__Instance)->Y = value;
+                ((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*)__Instance)->Y = value;
             }
         }
 
@@ -1047,12 +1047,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance)->Z;
+                return ((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*) __Instance)->Z;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*)__Instance)->Z = value;
+                ((global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*)__Instance)->Z = value;
             }
         }
     }
@@ -1080,17 +1080,17 @@ namespace LitteCmsNet
         private CmsProfileID.__Internal __instance;
         internal CmsProfileID.__Internal __Instance { get { return __instance; } }
 
-        internal static global::LitteCmsNet.CmsProfileID __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsProfileID __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsProfileID(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsProfileID(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsProfileID __CreateInstance(global::LitteCmsNet.CmsProfileID.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsProfileID __CreateInstance(global::LittleCmsNet.CmsProfileID.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsProfileID(native, skipVTables);
+            return new global::LittleCmsNet.CmsProfileID(native, skipVTables);
         }
 
-        private CmsProfileID(global::LitteCmsNet.CmsProfileID.__Internal native, bool skipVTables = false)
+        private CmsProfileID(global::LittleCmsNet.CmsProfileID.__Internal native, bool skipVTables = false)
             : this()
         {
             __instance = native;
@@ -1098,10 +1098,10 @@ namespace LitteCmsNet
 
         private CmsProfileID(void* native, bool skipVTables = false) : this()
         {
-            __instance = *(global::LitteCmsNet.CmsProfileID.__Internal*) native;
+            __instance = *(global::LittleCmsNet.CmsProfileID.__Internal*) native;
         }
 
-        public CmsProfileID(global::LitteCmsNet.CmsProfileID _0)
+        public CmsProfileID(global::LittleCmsNet.CmsProfileID _0)
             : this()
         {
             var ____arg0 = _0.__Instance;
@@ -1218,22 +1218,22 @@ namespace LitteCmsNet
             internal uint version;
 
             [FieldOffset(12)]
-            internal global::LitteCmsNet.CmsProfileClassSignature deviceClass;
+            internal global::LittleCmsNet.CmsProfileClassSignature deviceClass;
 
             [FieldOffset(16)]
-            internal global::LitteCmsNet.CmsColorSpaceSignature colorSpace;
+            internal global::LittleCmsNet.CmsColorSpaceSignature colorSpace;
 
             [FieldOffset(20)]
-            internal global::LitteCmsNet.CmsColorSpaceSignature pcs;
+            internal global::LittleCmsNet.CmsColorSpaceSignature pcs;
 
             [FieldOffset(24)]
-            internal global::LitteCmsNet.CmsDateTimeNumber.__Internal date;
+            internal global::LittleCmsNet.CmsDateTimeNumber.__Internal date;
 
             [FieldOffset(36)]
             internal uint magic;
 
             [FieldOffset(40)]
-            internal global::LitteCmsNet.CmsPlatformSignature platform;
+            internal global::LittleCmsNet.CmsPlatformSignature platform;
 
             [FieldOffset(44)]
             internal uint flags;
@@ -1251,13 +1251,13 @@ namespace LitteCmsNet
             internal uint renderingIntent;
 
             [FieldOffset(68)]
-            internal global::LitteCmsNet.CmsEncodedXYZNumber.__Internal illuminant;
+            internal global::LittleCmsNet.CmsEncodedXYZNumber.__Internal illuminant;
 
             [FieldOffset(80)]
             internal uint creator;
 
             [FieldOffset(84)]
-            internal global::LitteCmsNet.CmsProfileID.__Internal profileID;
+            internal global::LittleCmsNet.CmsProfileID.__Internal profileID;
 
             [FieldOffset(100)]
             internal fixed sbyte reserved[28];
@@ -1271,29 +1271,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCHeader> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCHeader>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCHeader> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCHeader>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsICCHeader __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCHeader __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCHeader(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsICCHeader(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsICCHeader __CreateInstance(global::LitteCmsNet.CmsICCHeader.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCHeader __CreateInstance(global::LittleCmsNet.CmsICCHeader.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCHeader(native, skipVTables);
+            return new global::LittleCmsNet.CmsICCHeader(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsICCHeader.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsICCHeader.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCHeader.__Internal));
-            *(global::LitteCmsNet.CmsICCHeader.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCHeader.__Internal));
+            *(global::LittleCmsNet.CmsICCHeader.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsICCHeader(global::LitteCmsNet.CmsICCHeader.__Internal native, bool skipVTables = false)
+        private CmsICCHeader(global::LittleCmsNet.CmsICCHeader.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -1309,17 +1309,17 @@ namespace LitteCmsNet
 
         public CmsICCHeader()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCHeader.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCHeader.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsICCHeader(global::LitteCmsNet.CmsICCHeader _0)
+        public CmsICCHeader(global::LittleCmsNet.CmsICCHeader _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCHeader.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCHeader.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance) = *((global::LitteCmsNet.CmsICCHeader.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance) = *((global::LittleCmsNet.CmsICCHeader.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -1331,7 +1331,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsICCHeader __dummy;
+            global::LittleCmsNet.CmsICCHeader __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -1342,12 +1342,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->size;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->size;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->size = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->size = value;
             }
         }
 
@@ -1355,12 +1355,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->cmmId;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->cmmId;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->cmmId = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->cmmId = value;
             }
         }
 
@@ -1368,66 +1368,66 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->version;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->version;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->version = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->version = value;
             }
         }
 
-        public global::LitteCmsNet.CmsProfileClassSignature DeviceClass
+        public global::LittleCmsNet.CmsProfileClassSignature DeviceClass
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->deviceClass;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->deviceClass;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->deviceClass = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->deviceClass = value;
             }
         }
 
-        public global::LitteCmsNet.CmsColorSpaceSignature ColorSpace
+        public global::LittleCmsNet.CmsColorSpaceSignature ColorSpace
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->colorSpace;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->colorSpace;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->colorSpace = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->colorSpace = value;
             }
         }
 
-        public global::LitteCmsNet.CmsColorSpaceSignature Pcs
+        public global::LittleCmsNet.CmsColorSpaceSignature Pcs
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->pcs;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->pcs;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->pcs = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->pcs = value;
             }
         }
 
-        public global::LitteCmsNet.CmsDateTimeNumber Date
+        public global::LittleCmsNet.CmsDateTimeNumber Date
         {
             get
             {
-                return global::LitteCmsNet.CmsDateTimeNumber.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->date));
+                return global::LittleCmsNet.CmsDateTimeNumber.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->date));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->date = *(global::LitteCmsNet.CmsDateTimeNumber.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->date = *(global::LittleCmsNet.CmsDateTimeNumber.__Internal*) value.__Instance;
             }
         }
 
@@ -1435,25 +1435,25 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->magic;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->magic;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->magic = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->magic = value;
             }
         }
 
-        public global::LitteCmsNet.CmsPlatformSignature Platform
+        public global::LittleCmsNet.CmsPlatformSignature Platform
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->platform;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->platform;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->platform = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->platform = value;
             }
         }
 
@@ -1461,12 +1461,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->flags;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->flags;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->flags = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->flags = value;
             }
         }
 
@@ -1474,12 +1474,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->manufacturer;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->manufacturer;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->manufacturer = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->manufacturer = value;
             }
         }
 
@@ -1487,12 +1487,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->model;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->model;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->model = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->model = value;
             }
         }
 
@@ -1500,12 +1500,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->attributes;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->attributes;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->attributes = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->attributes = value;
             }
         }
 
@@ -1513,27 +1513,27 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->renderingIntent;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->renderingIntent;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->renderingIntent = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->renderingIntent = value;
             }
         }
 
-        public global::LitteCmsNet.CmsEncodedXYZNumber Illuminant
+        public global::LittleCmsNet.CmsEncodedXYZNumber Illuminant
         {
             get
             {
-                return global::LitteCmsNet.CmsEncodedXYZNumber.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->illuminant));
+                return global::LittleCmsNet.CmsEncodedXYZNumber.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->illuminant));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->illuminant = *(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->illuminant = *(global::LittleCmsNet.CmsEncodedXYZNumber.__Internal*) value.__Instance;
             }
         }
 
@@ -1541,25 +1541,25 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->creator;
+                return ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->creator;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->creator = value;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->creator = value;
             }
         }
 
-        public global::LitteCmsNet.CmsProfileID ProfileID
+        public global::LittleCmsNet.CmsProfileID ProfileID
         {
             get
             {
-                return global::LitteCmsNet.CmsProfileID.__CreateInstance(((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->profileID);
+                return global::LittleCmsNet.CmsProfileID.__CreateInstance(((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->profileID);
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->profileID = value.__Instance;
+                ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->profileID = value.__Instance;
             }
         }
 
@@ -1568,11 +1568,11 @@ namespace LitteCmsNet
             get
             {
                 sbyte[] __value = null;
-                if (((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->reserved != null)
+                if (((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->reserved != null)
                 {
                     __value = new sbyte[28];
                     for (int i = 0; i < 28; i++)
-                        __value[i] = ((global::LitteCmsNet.CmsICCHeader.__Internal*) __Instance)->reserved[i];
+                        __value[i] = ((global::LittleCmsNet.CmsICCHeader.__Internal*) __Instance)->reserved[i];
                 }
                 return __value;
             }
@@ -1582,7 +1582,7 @@ namespace LitteCmsNet
                 if (value != null)
                 {
                     for (int i = 0; i < 28; i++)
-                        ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->reserved[i] = value[i];
+                        ((global::LittleCmsNet.CmsICCHeader.__Internal*)__Instance)->reserved[i] = value[i];
                 }
             }
         }
@@ -1594,7 +1594,7 @@ namespace LitteCmsNet
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::LitteCmsNet.CmsTagTypeSignature sig;
+            internal global::LittleCmsNet.CmsTagTypeSignature sig;
 
             [FieldOffset(4)]
             internal fixed sbyte reserved[4];
@@ -1608,29 +1608,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsTagBase> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsTagBase>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsTagBase> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsTagBase>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsTagBase __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsTagBase __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsTagBase(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsTagBase(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsTagBase __CreateInstance(global::LitteCmsNet.CmsTagBase.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsTagBase __CreateInstance(global::LittleCmsNet.CmsTagBase.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsTagBase(native, skipVTables);
+            return new global::LittleCmsNet.CmsTagBase(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsTagBase.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsTagBase.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsTagBase.__Internal));
-            *(global::LitteCmsNet.CmsTagBase.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsTagBase.__Internal));
+            *(global::LittleCmsNet.CmsTagBase.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsTagBase(global::LitteCmsNet.CmsTagBase.__Internal native, bool skipVTables = false)
+        private CmsTagBase(global::LittleCmsNet.CmsTagBase.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -1646,17 +1646,17 @@ namespace LitteCmsNet
 
         public CmsTagBase()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsTagBase.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsTagBase.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsTagBase(global::LitteCmsNet.CmsTagBase _0)
+        public CmsTagBase(global::LittleCmsNet.CmsTagBase _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsTagBase.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsTagBase.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsTagBase.__Internal*) __Instance) = *((global::LitteCmsNet.CmsTagBase.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsTagBase.__Internal*) __Instance) = *((global::LittleCmsNet.CmsTagBase.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -1668,23 +1668,23 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsTagBase __dummy;
+            global::LittleCmsNet.CmsTagBase __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsTagTypeSignature Sig
+        public global::LittleCmsNet.CmsTagTypeSignature Sig
         {
             get
             {
-                return ((global::LitteCmsNet.CmsTagBase.__Internal*) __Instance)->sig;
+                return ((global::LittleCmsNet.CmsTagBase.__Internal*) __Instance)->sig;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsTagBase.__Internal*)__Instance)->sig = value;
+                ((global::LittleCmsNet.CmsTagBase.__Internal*)__Instance)->sig = value;
             }
         }
 
@@ -1693,11 +1693,11 @@ namespace LitteCmsNet
             get
             {
                 sbyte[] __value = null;
-                if (((global::LitteCmsNet.CmsTagBase.__Internal*) __Instance)->reserved != null)
+                if (((global::LittleCmsNet.CmsTagBase.__Internal*) __Instance)->reserved != null)
                 {
                     __value = new sbyte[4];
                     for (int i = 0; i < 4; i++)
-                        __value[i] = ((global::LitteCmsNet.CmsTagBase.__Internal*) __Instance)->reserved[i];
+                        __value[i] = ((global::LittleCmsNet.CmsTagBase.__Internal*) __Instance)->reserved[i];
                 }
                 return __value;
             }
@@ -1707,7 +1707,7 @@ namespace LitteCmsNet
                 if (value != null)
                 {
                     for (int i = 0; i < 4; i++)
-                        ((global::LitteCmsNet.CmsTagBase.__Internal*)__Instance)->reserved[i] = value[i];
+                        ((global::LittleCmsNet.CmsTagBase.__Internal*)__Instance)->reserved[i] = value[i];
                 }
             }
         }
@@ -1719,7 +1719,7 @@ namespace LitteCmsNet
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::LitteCmsNet.CmsTagSignature sig;
+            internal global::LittleCmsNet.CmsTagSignature sig;
 
             [FieldOffset(4)]
             internal uint offset;
@@ -1736,29 +1736,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsTagEntry> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsTagEntry>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsTagEntry> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsTagEntry>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsTagEntry __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsTagEntry __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsTagEntry(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsTagEntry(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsTagEntry __CreateInstance(global::LitteCmsNet.CmsTagEntry.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsTagEntry __CreateInstance(global::LittleCmsNet.CmsTagEntry.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsTagEntry(native, skipVTables);
+            return new global::LittleCmsNet.CmsTagEntry(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsTagEntry.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsTagEntry.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsTagEntry.__Internal));
-            *(global::LitteCmsNet.CmsTagEntry.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsTagEntry.__Internal));
+            *(global::LittleCmsNet.CmsTagEntry.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsTagEntry(global::LitteCmsNet.CmsTagEntry.__Internal native, bool skipVTables = false)
+        private CmsTagEntry(global::LittleCmsNet.CmsTagEntry.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -1774,17 +1774,17 @@ namespace LitteCmsNet
 
         public CmsTagEntry()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsTagEntry.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsTagEntry.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsTagEntry(global::LitteCmsNet.CmsTagEntry _0)
+        public CmsTagEntry(global::LittleCmsNet.CmsTagEntry _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsTagEntry.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsTagEntry.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsTagEntry.__Internal*) __Instance) = *((global::LitteCmsNet.CmsTagEntry.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsTagEntry.__Internal*) __Instance) = *((global::LittleCmsNet.CmsTagEntry.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -1796,23 +1796,23 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsTagEntry __dummy;
+            global::LittleCmsNet.CmsTagEntry __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsTagSignature Sig
+        public global::LittleCmsNet.CmsTagSignature Sig
         {
             get
             {
-                return ((global::LitteCmsNet.CmsTagEntry.__Internal*) __Instance)->sig;
+                return ((global::LittleCmsNet.CmsTagEntry.__Internal*) __Instance)->sig;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsTagEntry.__Internal*)__Instance)->sig = value;
+                ((global::LittleCmsNet.CmsTagEntry.__Internal*)__Instance)->sig = value;
             }
         }
 
@@ -1820,12 +1820,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsTagEntry.__Internal*) __Instance)->offset;
+                return ((global::LittleCmsNet.CmsTagEntry.__Internal*) __Instance)->offset;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsTagEntry.__Internal*)__Instance)->offset = value;
+                ((global::LittleCmsNet.CmsTagEntry.__Internal*)__Instance)->offset = value;
             }
         }
 
@@ -1833,12 +1833,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsTagEntry.__Internal*) __Instance)->size;
+                return ((global::LittleCmsNet.CmsTagEntry.__Internal*) __Instance)->size;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsTagEntry.__Internal*)__Instance)->size = value;
+                ((global::LittleCmsNet.CmsTagEntry.__Internal*)__Instance)->size = value;
             }
         }
     }
@@ -1866,29 +1866,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIEXYZ> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIEXYZ>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIEXYZ> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIEXYZ>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCIEXYZ __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIEXYZ __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIEXYZ(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCIEXYZ(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCIEXYZ __CreateInstance(global::LitteCmsNet.CmsCIEXYZ.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIEXYZ __CreateInstance(global::LittleCmsNet.CmsCIEXYZ.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIEXYZ(native, skipVTables);
+            return new global::LittleCmsNet.CmsCIEXYZ(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCIEXYZ.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCIEXYZ.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIEXYZ.__Internal));
-            *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIEXYZ.__Internal));
+            *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCIEXYZ(global::LitteCmsNet.CmsCIEXYZ.__Internal native, bool skipVTables = false)
+        private CmsCIEXYZ(global::LittleCmsNet.CmsCIEXYZ.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -1904,17 +1904,17 @@ namespace LitteCmsNet
 
         public CmsCIEXYZ()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIEXYZ.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIEXYZ.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsCIEXYZ(global::LitteCmsNet.CmsCIEXYZ _0)
+        public CmsCIEXYZ(global::LittleCmsNet.CmsCIEXYZ _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIEXYZ.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIEXYZ.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsCIEXYZ.__Internal*) __Instance) = *((global::LitteCmsNet.CmsCIEXYZ.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsCIEXYZ.__Internal*) __Instance) = *((global::LittleCmsNet.CmsCIEXYZ.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -1926,7 +1926,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsCIEXYZ __dummy;
+            global::LittleCmsNet.CmsCIEXYZ __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -1937,12 +1937,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIEXYZ.__Internal*) __Instance)->X;
+                return ((global::LittleCmsNet.CmsCIEXYZ.__Internal*) __Instance)->X;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIEXYZ.__Internal*)__Instance)->X = value;
+                ((global::LittleCmsNet.CmsCIEXYZ.__Internal*)__Instance)->X = value;
             }
         }
 
@@ -1950,12 +1950,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIEXYZ.__Internal*) __Instance)->Y;
+                return ((global::LittleCmsNet.CmsCIEXYZ.__Internal*) __Instance)->Y;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIEXYZ.__Internal*)__Instance)->Y = value;
+                ((global::LittleCmsNet.CmsCIEXYZ.__Internal*)__Instance)->Y = value;
             }
         }
 
@@ -1963,12 +1963,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIEXYZ.__Internal*) __Instance)->Z;
+                return ((global::LittleCmsNet.CmsCIEXYZ.__Internal*) __Instance)->Z;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIEXYZ.__Internal*)__Instance)->Z = value;
+                ((global::LittleCmsNet.CmsCIEXYZ.__Internal*)__Instance)->Z = value;
             }
         }
     }
@@ -1996,29 +1996,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIExyY> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIExyY>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIExyY> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIExyY>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCIExyY __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIExyY __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIExyY(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCIExyY(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCIExyY __CreateInstance(global::LitteCmsNet.CmsCIExyY.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIExyY __CreateInstance(global::LittleCmsNet.CmsCIExyY.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIExyY(native, skipVTables);
+            return new global::LittleCmsNet.CmsCIExyY(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCIExyY.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCIExyY.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIExyY.__Internal));
-            *(global::LitteCmsNet.CmsCIExyY.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIExyY.__Internal));
+            *(global::LittleCmsNet.CmsCIExyY.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCIExyY(global::LitteCmsNet.CmsCIExyY.__Internal native, bool skipVTables = false)
+        private CmsCIExyY(global::LittleCmsNet.CmsCIExyY.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2034,17 +2034,17 @@ namespace LitteCmsNet
 
         public CmsCIExyY()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIExyY.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIExyY.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsCIExyY(global::LitteCmsNet.CmsCIExyY _0)
+        public CmsCIExyY(global::LittleCmsNet.CmsCIExyY _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIExyY.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIExyY.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsCIExyY.__Internal*) __Instance) = *((global::LitteCmsNet.CmsCIExyY.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsCIExyY.__Internal*) __Instance) = *((global::LittleCmsNet.CmsCIExyY.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -2056,7 +2056,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsCIExyY __dummy;
+            global::LittleCmsNet.CmsCIExyY __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -2067,12 +2067,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIExyY.__Internal*) __Instance)->x;
+                return ((global::LittleCmsNet.CmsCIExyY.__Internal*) __Instance)->x;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIExyY.__Internal*)__Instance)->x = value;
+                ((global::LittleCmsNet.CmsCIExyY.__Internal*)__Instance)->x = value;
             }
         }
 
@@ -2080,12 +2080,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIExyY.__Internal*) __Instance)->y;
+                return ((global::LittleCmsNet.CmsCIExyY.__Internal*) __Instance)->y;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIExyY.__Internal*)__Instance)->y = value;
+                ((global::LittleCmsNet.CmsCIExyY.__Internal*)__Instance)->y = value;
             }
         }
 
@@ -2093,12 +2093,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIExyY.__Internal*) __Instance)->Y;
+                return ((global::LittleCmsNet.CmsCIExyY.__Internal*) __Instance)->Y;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIExyY.__Internal*)__Instance)->Y = value;
+                ((global::LittleCmsNet.CmsCIExyY.__Internal*)__Instance)->Y = value;
             }
         }
     }
@@ -2126,29 +2126,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIELab> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIELab>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIELab> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIELab>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCIELab __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIELab __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIELab(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCIELab(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCIELab __CreateInstance(global::LitteCmsNet.CmsCIELab.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIELab __CreateInstance(global::LittleCmsNet.CmsCIELab.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIELab(native, skipVTables);
+            return new global::LittleCmsNet.CmsCIELab(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCIELab.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCIELab.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIELab.__Internal));
-            *(global::LitteCmsNet.CmsCIELab.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIELab.__Internal));
+            *(global::LittleCmsNet.CmsCIELab.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCIELab(global::LitteCmsNet.CmsCIELab.__Internal native, bool skipVTables = false)
+        private CmsCIELab(global::LittleCmsNet.CmsCIELab.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2164,17 +2164,17 @@ namespace LitteCmsNet
 
         public CmsCIELab()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIELab.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIELab.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsCIELab(global::LitteCmsNet.CmsCIELab _0)
+        public CmsCIELab(global::LittleCmsNet.CmsCIELab _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIELab.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIELab.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsCIELab.__Internal*) __Instance) = *((global::LitteCmsNet.CmsCIELab.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsCIELab.__Internal*) __Instance) = *((global::LittleCmsNet.CmsCIELab.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -2186,7 +2186,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsCIELab __dummy;
+            global::LittleCmsNet.CmsCIELab __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -2197,12 +2197,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIELab.__Internal*) __Instance)->L;
+                return ((global::LittleCmsNet.CmsCIELab.__Internal*) __Instance)->L;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIELab.__Internal*)__Instance)->L = value;
+                ((global::LittleCmsNet.CmsCIELab.__Internal*)__Instance)->L = value;
             }
         }
 
@@ -2210,12 +2210,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIELab.__Internal*) __Instance)->a;
+                return ((global::LittleCmsNet.CmsCIELab.__Internal*) __Instance)->a;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIELab.__Internal*)__Instance)->a = value;
+                ((global::LittleCmsNet.CmsCIELab.__Internal*)__Instance)->a = value;
             }
         }
 
@@ -2223,12 +2223,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIELab.__Internal*) __Instance)->b;
+                return ((global::LittleCmsNet.CmsCIELab.__Internal*) __Instance)->b;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIELab.__Internal*)__Instance)->b = value;
+                ((global::LittleCmsNet.CmsCIELab.__Internal*)__Instance)->b = value;
             }
         }
     }
@@ -2256,29 +2256,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIELCh> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIELCh>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIELCh> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIELCh>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCIELCh __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIELCh __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIELCh(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCIELCh(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCIELCh __CreateInstance(global::LitteCmsNet.CmsCIELCh.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIELCh __CreateInstance(global::LittleCmsNet.CmsCIELCh.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIELCh(native, skipVTables);
+            return new global::LittleCmsNet.CmsCIELCh(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCIELCh.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCIELCh.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIELCh.__Internal));
-            *(global::LitteCmsNet.CmsCIELCh.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIELCh.__Internal));
+            *(global::LittleCmsNet.CmsCIELCh.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCIELCh(global::LitteCmsNet.CmsCIELCh.__Internal native, bool skipVTables = false)
+        private CmsCIELCh(global::LittleCmsNet.CmsCIELCh.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2294,17 +2294,17 @@ namespace LitteCmsNet
 
         public CmsCIELCh()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIELCh.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIELCh.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsCIELCh(global::LitteCmsNet.CmsCIELCh _0)
+        public CmsCIELCh(global::LittleCmsNet.CmsCIELCh _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIELCh.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIELCh.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsCIELCh.__Internal*) __Instance) = *((global::LitteCmsNet.CmsCIELCh.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsCIELCh.__Internal*) __Instance) = *((global::LittleCmsNet.CmsCIELCh.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -2316,7 +2316,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsCIELCh __dummy;
+            global::LittleCmsNet.CmsCIELCh __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -2327,12 +2327,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIELCh.__Internal*) __Instance)->L;
+                return ((global::LittleCmsNet.CmsCIELCh.__Internal*) __Instance)->L;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIELCh.__Internal*)__Instance)->L = value;
+                ((global::LittleCmsNet.CmsCIELCh.__Internal*)__Instance)->L = value;
             }
         }
 
@@ -2340,12 +2340,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIELCh.__Internal*) __Instance)->C;
+                return ((global::LittleCmsNet.CmsCIELCh.__Internal*) __Instance)->C;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIELCh.__Internal*)__Instance)->C = value;
+                ((global::LittleCmsNet.CmsCIELCh.__Internal*)__Instance)->C = value;
             }
         }
 
@@ -2353,12 +2353,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCIELCh.__Internal*) __Instance)->h;
+                return ((global::LittleCmsNet.CmsCIELCh.__Internal*) __Instance)->h;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCIELCh.__Internal*)__Instance)->h = value;
+                ((global::LittleCmsNet.CmsCIELCh.__Internal*)__Instance)->h = value;
             }
         }
     }
@@ -2386,29 +2386,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsJCh> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsJCh>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsJCh> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsJCh>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsJCh __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsJCh __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsJCh(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsJCh(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsJCh __CreateInstance(global::LitteCmsNet.CmsJCh.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsJCh __CreateInstance(global::LittleCmsNet.CmsJCh.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsJCh(native, skipVTables);
+            return new global::LittleCmsNet.CmsJCh(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsJCh.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsJCh.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsJCh.__Internal));
-            *(global::LitteCmsNet.CmsJCh.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsJCh.__Internal));
+            *(global::LittleCmsNet.CmsJCh.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsJCh(global::LitteCmsNet.CmsJCh.__Internal native, bool skipVTables = false)
+        private CmsJCh(global::LittleCmsNet.CmsJCh.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2424,17 +2424,17 @@ namespace LitteCmsNet
 
         public CmsJCh()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsJCh.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsJCh.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsJCh(global::LitteCmsNet.CmsJCh _0)
+        public CmsJCh(global::LittleCmsNet.CmsJCh _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsJCh.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsJCh.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsJCh.__Internal*) __Instance) = *((global::LitteCmsNet.CmsJCh.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsJCh.__Internal*) __Instance) = *((global::LittleCmsNet.CmsJCh.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -2446,7 +2446,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsJCh __dummy;
+            global::LittleCmsNet.CmsJCh __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -2457,12 +2457,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsJCh.__Internal*) __Instance)->J;
+                return ((global::LittleCmsNet.CmsJCh.__Internal*) __Instance)->J;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsJCh.__Internal*)__Instance)->J = value;
+                ((global::LittleCmsNet.CmsJCh.__Internal*)__Instance)->J = value;
             }
         }
 
@@ -2470,12 +2470,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsJCh.__Internal*) __Instance)->C;
+                return ((global::LittleCmsNet.CmsJCh.__Internal*) __Instance)->C;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsJCh.__Internal*)__Instance)->C = value;
+                ((global::LittleCmsNet.CmsJCh.__Internal*)__Instance)->C = value;
             }
         }
 
@@ -2483,12 +2483,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsJCh.__Internal*) __Instance)->h;
+                return ((global::LittleCmsNet.CmsJCh.__Internal*) __Instance)->h;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsJCh.__Internal*)__Instance)->h = value;
+                ((global::LittleCmsNet.CmsJCh.__Internal*)__Instance)->h = value;
             }
         }
     }
@@ -2499,13 +2499,13 @@ namespace LitteCmsNet
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::LitteCmsNet.CmsCIEXYZ.__Internal Red;
+            internal global::LittleCmsNet.CmsCIEXYZ.__Internal Red;
 
             [FieldOffset(24)]
-            internal global::LitteCmsNet.CmsCIEXYZ.__Internal Green;
+            internal global::LittleCmsNet.CmsCIEXYZ.__Internal Green;
 
             [FieldOffset(48)]
-            internal global::LitteCmsNet.CmsCIEXYZ.__Internal Blue;
+            internal global::LittleCmsNet.CmsCIEXYZ.__Internal Blue;
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -2516,29 +2516,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIEXYZTRIPLE> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIEXYZTRIPLE>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIEXYZTRIPLE> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIEXYZTRIPLE>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCIEXYZTRIPLE __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIEXYZTRIPLE __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIEXYZTRIPLE(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCIEXYZTRIPLE(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCIEXYZTRIPLE __CreateInstance(global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIEXYZTRIPLE __CreateInstance(global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIEXYZTRIPLE(native, skipVTables);
+            return new global::LittleCmsNet.CmsCIEXYZTRIPLE(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal));
-            *(global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal));
+            *(global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCIEXYZTRIPLE(global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal native, bool skipVTables = false)
+        private CmsCIEXYZTRIPLE(global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2554,17 +2554,17 @@ namespace LitteCmsNet
 
         public CmsCIEXYZTRIPLE()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsCIEXYZTRIPLE(global::LitteCmsNet.CmsCIEXYZTRIPLE _0)
+        public CmsCIEXYZTRIPLE(global::LittleCmsNet.CmsCIEXYZTRIPLE _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance) = *((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance) = *((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -2576,55 +2576,55 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsCIEXYZTRIPLE __dummy;
+            global::LittleCmsNet.CmsCIEXYZTRIPLE __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsCIEXYZ Red
+        public global::LittleCmsNet.CmsCIEXYZ Red
         {
             get
             {
-                return global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance)->Red));
+                return global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance)->Red));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Red = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Red = *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsCIEXYZ Green
+        public global::LittleCmsNet.CmsCIEXYZ Green
         {
             get
             {
-                return global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance)->Green));
+                return global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance)->Green));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Green = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Green = *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsCIEXYZ Blue
+        public global::LittleCmsNet.CmsCIEXYZ Blue
         {
             get
             {
-                return global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance)->Blue));
+                return global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*) __Instance)->Blue));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Blue = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Blue = *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
     }
@@ -2635,13 +2635,13 @@ namespace LitteCmsNet
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::LitteCmsNet.CmsCIExyY.__Internal Red;
+            internal global::LittleCmsNet.CmsCIExyY.__Internal Red;
 
             [FieldOffset(24)]
-            internal global::LitteCmsNet.CmsCIExyY.__Internal Green;
+            internal global::LittleCmsNet.CmsCIExyY.__Internal Green;
 
             [FieldOffset(48)]
-            internal global::LitteCmsNet.CmsCIExyY.__Internal Blue;
+            internal global::LittleCmsNet.CmsCIExyY.__Internal Blue;
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -2652,29 +2652,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIExyYTRIPLE> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCIExyYTRIPLE>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIExyYTRIPLE> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCIExyYTRIPLE>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCIExyYTRIPLE __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIExyYTRIPLE __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIExyYTRIPLE(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCIExyYTRIPLE(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCIExyYTRIPLE __CreateInstance(global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCIExyYTRIPLE __CreateInstance(global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCIExyYTRIPLE(native, skipVTables);
+            return new global::LittleCmsNet.CmsCIExyYTRIPLE(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal));
-            *(global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal));
+            *(global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCIExyYTRIPLE(global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal native, bool skipVTables = false)
+        private CmsCIExyYTRIPLE(global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2690,17 +2690,17 @@ namespace LitteCmsNet
 
         public CmsCIExyYTRIPLE()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsCIExyYTRIPLE(global::LitteCmsNet.CmsCIExyYTRIPLE _0)
+        public CmsCIExyYTRIPLE(global::LittleCmsNet.CmsCIExyYTRIPLE _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance) = *((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance) = *((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -2712,55 +2712,55 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsCIExyYTRIPLE __dummy;
+            global::LittleCmsNet.CmsCIExyYTRIPLE __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsCIExyY Red
+        public global::LittleCmsNet.CmsCIExyY Red
         {
             get
             {
-                return global::LitteCmsNet.CmsCIExyY.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance)->Red));
+                return global::LittleCmsNet.CmsCIExyY.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance)->Red));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Red = *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Red = *(global::LittleCmsNet.CmsCIExyY.__Internal*) value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsCIExyY Green
+        public global::LittleCmsNet.CmsCIExyY Green
         {
             get
             {
-                return global::LitteCmsNet.CmsCIExyY.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance)->Green));
+                return global::LittleCmsNet.CmsCIExyY.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance)->Green));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Green = *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Green = *(global::LittleCmsNet.CmsCIExyY.__Internal*) value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsCIExyY Blue
+        public global::LittleCmsNet.CmsCIExyY Blue
         {
             get
             {
-                return global::LitteCmsNet.CmsCIExyY.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance)->Blue));
+                return global::LittleCmsNet.CmsCIExyY.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*) __Instance)->Blue));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Blue = *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Blue = *(global::LittleCmsNet.CmsCIExyY.__Internal*) value.__Instance;
             }
         }
     }
@@ -2774,7 +2774,7 @@ namespace LitteCmsNet
             internal uint Observer;
 
             [FieldOffset(8)]
-            internal global::LitteCmsNet.CmsCIEXYZ.__Internal Backing;
+            internal global::LittleCmsNet.CmsCIEXYZ.__Internal Backing;
 
             [FieldOffset(32)]
             internal uint Geometry;
@@ -2794,29 +2794,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCMeasurementConditions> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCMeasurementConditions>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCMeasurementConditions> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCMeasurementConditions>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsICCMeasurementConditions __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCMeasurementConditions __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCMeasurementConditions(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsICCMeasurementConditions(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsICCMeasurementConditions __CreateInstance(global::LitteCmsNet.CmsICCMeasurementConditions.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCMeasurementConditions __CreateInstance(global::LittleCmsNet.CmsICCMeasurementConditions.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCMeasurementConditions(native, skipVTables);
+            return new global::LittleCmsNet.CmsICCMeasurementConditions(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsICCMeasurementConditions.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsICCMeasurementConditions.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCMeasurementConditions.__Internal));
-            *(global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCMeasurementConditions.__Internal));
+            *(global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsICCMeasurementConditions(global::LitteCmsNet.CmsICCMeasurementConditions.__Internal native, bool skipVTables = false)
+        private CmsICCMeasurementConditions(global::LittleCmsNet.CmsICCMeasurementConditions.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2832,17 +2832,17 @@ namespace LitteCmsNet
 
         public CmsICCMeasurementConditions()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCMeasurementConditions.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCMeasurementConditions.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsICCMeasurementConditions(global::LitteCmsNet.CmsICCMeasurementConditions _0)
+        public CmsICCMeasurementConditions(global::LittleCmsNet.CmsICCMeasurementConditions _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCMeasurementConditions.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCMeasurementConditions.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance) = *((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance) = *((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -2854,7 +2854,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsICCMeasurementConditions __dummy;
+            global::LittleCmsNet.CmsICCMeasurementConditions __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -2865,27 +2865,27 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Observer;
+                return ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Observer;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Observer = value;
+                ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Observer = value;
             }
         }
 
-        public global::LitteCmsNet.CmsCIEXYZ Backing
+        public global::LittleCmsNet.CmsCIEXYZ Backing
         {
             get
             {
-                return global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Backing));
+                return global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Backing));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Backing = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Backing = *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -2893,12 +2893,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Geometry;
+                return ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Geometry;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Geometry = value;
+                ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Geometry = value;
             }
         }
 
@@ -2906,12 +2906,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Flare;
+                return ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->Flare;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Flare = value;
+                ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Flare = value;
             }
         }
 
@@ -2919,12 +2919,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->IlluminantType;
+                return ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*) __Instance)->IlluminantType;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->IlluminantType = value;
+                ((global::LittleCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->IlluminantType = value;
             }
         }
     }
@@ -2935,10 +2935,10 @@ namespace LitteCmsNet
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::LitteCmsNet.CmsCIEXYZ.__Internal IlluminantXYZ;
+            internal global::LittleCmsNet.CmsCIEXYZ.__Internal IlluminantXYZ;
 
             [FieldOffset(24)]
-            internal global::LitteCmsNet.CmsCIEXYZ.__Internal SurroundXYZ;
+            internal global::LittleCmsNet.CmsCIEXYZ.__Internal SurroundXYZ;
 
             [FieldOffset(48)]
             internal uint IlluminantType;
@@ -2952,29 +2952,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCViewingConditions> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsICCViewingConditions>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCViewingConditions> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsICCViewingConditions>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsICCViewingConditions __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCViewingConditions __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCViewingConditions(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsICCViewingConditions(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsICCViewingConditions __CreateInstance(global::LitteCmsNet.CmsICCViewingConditions.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsICCViewingConditions __CreateInstance(global::LittleCmsNet.CmsICCViewingConditions.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsICCViewingConditions(native, skipVTables);
+            return new global::LittleCmsNet.CmsICCViewingConditions(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsICCViewingConditions.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsICCViewingConditions.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCViewingConditions.__Internal));
-            *(global::LitteCmsNet.CmsICCViewingConditions.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCViewingConditions.__Internal));
+            *(global::LittleCmsNet.CmsICCViewingConditions.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsICCViewingConditions(global::LitteCmsNet.CmsICCViewingConditions.__Internal native, bool skipVTables = false)
+        private CmsICCViewingConditions(global::LittleCmsNet.CmsICCViewingConditions.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -2990,17 +2990,17 @@ namespace LitteCmsNet
 
         public CmsICCViewingConditions()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCViewingConditions.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCViewingConditions.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsICCViewingConditions(global::LitteCmsNet.CmsICCViewingConditions _0)
+        public CmsICCViewingConditions(global::LittleCmsNet.CmsICCViewingConditions _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsICCViewingConditions.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsICCViewingConditions.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsICCViewingConditions.__Internal*) __Instance) = *((global::LitteCmsNet.CmsICCViewingConditions.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsICCViewingConditions.__Internal*) __Instance) = *((global::LittleCmsNet.CmsICCViewingConditions.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -3012,40 +3012,40 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsICCViewingConditions __dummy;
+            global::LittleCmsNet.CmsICCViewingConditions __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsCIEXYZ IlluminantXYZ
+        public global::LittleCmsNet.CmsCIEXYZ IlluminantXYZ
         {
             get
             {
-                return global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsICCViewingConditions.__Internal*) __Instance)->IlluminantXYZ));
+                return global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsICCViewingConditions.__Internal*) __Instance)->IlluminantXYZ));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->IlluminantXYZ = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->IlluminantXYZ = *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsCIEXYZ SurroundXYZ
+        public global::LittleCmsNet.CmsCIEXYZ SurroundXYZ
         {
             get
             {
-                return global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsICCViewingConditions.__Internal*) __Instance)->SurroundXYZ));
+                return global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsICCViewingConditions.__Internal*) __Instance)->SurroundXYZ));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->SurroundXYZ = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->SurroundXYZ = *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -3053,12 +3053,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*) __Instance)->IlluminantType;
+                return ((global::LittleCmsNet.CmsICCViewingConditions.__Internal*) __Instance)->IlluminantType;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->IlluminantType = value;
+                ((global::LittleCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->IlluminantType = value;
             }
         }
     }
@@ -3069,7 +3069,7 @@ namespace LitteCmsNet
         public partial struct __Internal
         {
             [FieldOffset(0)]
-            internal global::LitteCmsNet.CmsCIEXYZ.__Internal whitePoint;
+            internal global::LittleCmsNet.CmsCIEXYZ.__Internal whitePoint;
 
             [FieldOffset(24)]
             internal double Yb;
@@ -3092,29 +3092,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsViewingConditions> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsViewingConditions>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsViewingConditions> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsViewingConditions>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsViewingConditions __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsViewingConditions __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsViewingConditions(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsViewingConditions(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsViewingConditions __CreateInstance(global::LitteCmsNet.CmsViewingConditions.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsViewingConditions __CreateInstance(global::LittleCmsNet.CmsViewingConditions.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsViewingConditions(native, skipVTables);
+            return new global::LittleCmsNet.CmsViewingConditions(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsViewingConditions.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsViewingConditions.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsViewingConditions.__Internal));
-            *(global::LitteCmsNet.CmsViewingConditions.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsViewingConditions.__Internal));
+            *(global::LittleCmsNet.CmsViewingConditions.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsViewingConditions(global::LitteCmsNet.CmsViewingConditions.__Internal native, bool skipVTables = false)
+        private CmsViewingConditions(global::LittleCmsNet.CmsViewingConditions.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -3130,17 +3130,17 @@ namespace LitteCmsNet
 
         public CmsViewingConditions()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsViewingConditions.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsViewingConditions.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsViewingConditions(global::LitteCmsNet.CmsViewingConditions _0)
+        public CmsViewingConditions(global::LittleCmsNet.CmsViewingConditions _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsViewingConditions.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsViewingConditions.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsViewingConditions.__Internal*) __Instance) = *((global::LitteCmsNet.CmsViewingConditions.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsViewingConditions.__Internal*) __Instance) = *((global::LittleCmsNet.CmsViewingConditions.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -3152,25 +3152,25 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsViewingConditions __dummy;
+            global::LittleCmsNet.CmsViewingConditions __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsCIEXYZ WhitePoint
+        public global::LittleCmsNet.CmsCIEXYZ WhitePoint
         {
             get
             {
-                return global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LitteCmsNet.CmsViewingConditions.__Internal*) __Instance)->whitePoint));
+                return global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(new global::System.IntPtr(&((global::LittleCmsNet.CmsViewingConditions.__Internal*) __Instance)->whitePoint));
             }
 
             set
             {
                 if (ReferenceEquals(value, null))
                     throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
-                ((global::LitteCmsNet.CmsViewingConditions.__Internal*)__Instance)->whitePoint = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                ((global::LittleCmsNet.CmsViewingConditions.__Internal*)__Instance)->whitePoint = *(global::LittleCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -3178,12 +3178,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsViewingConditions.__Internal*) __Instance)->Yb;
+                return ((global::LittleCmsNet.CmsViewingConditions.__Internal*) __Instance)->Yb;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsViewingConditions.__Internal*)__Instance)->Yb = value;
+                ((global::LittleCmsNet.CmsViewingConditions.__Internal*)__Instance)->Yb = value;
             }
         }
 
@@ -3191,12 +3191,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsViewingConditions.__Internal*) __Instance)->La;
+                return ((global::LittleCmsNet.CmsViewingConditions.__Internal*) __Instance)->La;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsViewingConditions.__Internal*)__Instance)->La = value;
+                ((global::LittleCmsNet.CmsViewingConditions.__Internal*)__Instance)->La = value;
             }
         }
 
@@ -3204,12 +3204,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsViewingConditions.__Internal*) __Instance)->surround;
+                return ((global::LittleCmsNet.CmsViewingConditions.__Internal*) __Instance)->surround;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsViewingConditions.__Internal*)__Instance)->surround = value;
+                ((global::LittleCmsNet.CmsViewingConditions.__Internal*)__Instance)->surround = value;
             }
         }
 
@@ -3217,12 +3217,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsViewingConditions.__Internal*) __Instance)->D_value;
+                return ((global::LittleCmsNet.CmsViewingConditions.__Internal*) __Instance)->D_value;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsViewingConditions.__Internal*)__Instance)->D_value = value;
+                ((global::LittleCmsNet.CmsViewingConditions.__Internal*)__Instance)->D_value = value;
             }
         }
     }
@@ -3259,29 +3259,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCurveSegment> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsCurveSegment>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCurveSegment> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsCurveSegment>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsCurveSegment __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCurveSegment __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCurveSegment(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsCurveSegment(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsCurveSegment __CreateInstance(global::LitteCmsNet.CmsCurveSegment.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsCurveSegment __CreateInstance(global::LittleCmsNet.CmsCurveSegment.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsCurveSegment(native, skipVTables);
+            return new global::LittleCmsNet.CmsCurveSegment(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsCurveSegment.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsCurveSegment.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCurveSegment.__Internal));
-            *(global::LitteCmsNet.CmsCurveSegment.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCurveSegment.__Internal));
+            *(global::LittleCmsNet.CmsCurveSegment.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsCurveSegment(global::LitteCmsNet.CmsCurveSegment.__Internal native, bool skipVTables = false)
+        private CmsCurveSegment(global::LittleCmsNet.CmsCurveSegment.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -3297,17 +3297,17 @@ namespace LitteCmsNet
 
         public CmsCurveSegment()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCurveSegment.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCurveSegment.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsCurveSegment(global::LitteCmsNet.CmsCurveSegment _0)
+        public CmsCurveSegment(global::LittleCmsNet.CmsCurveSegment _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsCurveSegment.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsCurveSegment.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance) = *((global::LitteCmsNet.CmsCurveSegment.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance) = *((global::LittleCmsNet.CmsCurveSegment.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -3319,7 +3319,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsCurveSegment __dummy;
+            global::LittleCmsNet.CmsCurveSegment __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -3330,12 +3330,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance)->x0;
+                return ((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance)->x0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCurveSegment.__Internal*)__Instance)->x0 = value;
+                ((global::LittleCmsNet.CmsCurveSegment.__Internal*)__Instance)->x0 = value;
             }
         }
 
@@ -3343,12 +3343,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance)->x1;
+                return ((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance)->x1;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCurveSegment.__Internal*)__Instance)->x1 = value;
+                ((global::LittleCmsNet.CmsCurveSegment.__Internal*)__Instance)->x1 = value;
             }
         }
 
@@ -3356,12 +3356,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance)->Type;
+                return ((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance)->Type;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCurveSegment.__Internal*)__Instance)->Type = value;
+                ((global::LittleCmsNet.CmsCurveSegment.__Internal*)__Instance)->Type = value;
             }
         }
 
@@ -3370,11 +3370,11 @@ namespace LitteCmsNet
             get
             {
                 double[] __value = null;
-                if (((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance)->Params != null)
+                if (((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance)->Params != null)
                 {
                     __value = new double[10];
                     for (int i = 0; i < 10; i++)
-                        __value[i] = ((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance)->Params[i];
+                        __value[i] = ((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance)->Params[i];
                 }
                 return __value;
             }
@@ -3384,7 +3384,7 @@ namespace LitteCmsNet
                 if (value != null)
                 {
                     for (int i = 0; i < 10; i++)
-                        ((global::LitteCmsNet.CmsCurveSegment.__Internal*)__Instance)->Params[i] = value[i];
+                        ((global::LittleCmsNet.CmsCurveSegment.__Internal*)__Instance)->Params[i] = value[i];
                 }
             }
         }
@@ -3393,12 +3393,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance)->nGridPoints;
+                return ((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance)->nGridPoints;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCurveSegment.__Internal*)__Instance)->nGridPoints = value;
+                ((global::LittleCmsNet.CmsCurveSegment.__Internal*)__Instance)->nGridPoints = value;
             }
         }
 
@@ -3406,12 +3406,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return (float*) ((global::LitteCmsNet.CmsCurveSegment.__Internal*) __Instance)->SampledPoints;
+                return (float*) ((global::LittleCmsNet.CmsCurveSegment.__Internal*) __Instance)->SampledPoints;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsCurveSegment.__Internal*)__Instance)->SampledPoints = (global::System.IntPtr) value;
+                ((global::LittleCmsNet.CmsCurveSegment.__Internal*)__Instance)->SampledPoints = (global::System.IntPtr) value;
             }
         }
     }
@@ -3439,29 +3439,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsUcrBg> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsUcrBg>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsUcrBg> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsUcrBg>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsUcrBg __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsUcrBg __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsUcrBg(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsUcrBg(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsUcrBg __CreateInstance(global::LitteCmsNet.CmsUcrBg.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsUcrBg __CreateInstance(global::LittleCmsNet.CmsUcrBg.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsUcrBg(native, skipVTables);
+            return new global::LittleCmsNet.CmsUcrBg(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsUcrBg.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsUcrBg.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsUcrBg.__Internal));
-            *(global::LitteCmsNet.CmsUcrBg.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsUcrBg.__Internal));
+            *(global::LittleCmsNet.CmsUcrBg.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsUcrBg(global::LitteCmsNet.CmsUcrBg.__Internal native, bool skipVTables = false)
+        private CmsUcrBg(global::LittleCmsNet.CmsUcrBg.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -3477,17 +3477,17 @@ namespace LitteCmsNet
 
         public CmsUcrBg()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsUcrBg.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsUcrBg.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsUcrBg(global::LitteCmsNet.CmsUcrBg _0)
+        public CmsUcrBg(global::LittleCmsNet.CmsUcrBg _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsUcrBg.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsUcrBg.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance) = *((global::LitteCmsNet.CmsUcrBg.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance) = *((global::LittleCmsNet.CmsUcrBg.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -3499,64 +3499,64 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsUcrBg __dummy;
+            global::LittleCmsNet.CmsUcrBg __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsCurveStruct Ucr
+        public global::LittleCmsNet.CmsCurveStruct Ucr
         {
             get
             {
-                global::LitteCmsNet.CmsCurveStruct __result0;
-                if (((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr))
-                    __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr];
-                else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr);
+                global::LittleCmsNet.CmsCurveStruct __result0;
+                if (((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr))
+                    __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr];
+                else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Ucr);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsUcrBg.__Internal*)__Instance)->Ucr = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsUcrBg.__Internal*)__Instance)->Ucr = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsCurveStruct Bg
+        public global::LittleCmsNet.CmsCurveStruct Bg
         {
             get
             {
-                global::LitteCmsNet.CmsCurveStruct __result0;
-                if (((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg))
-                    __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg];
-                else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg);
+                global::LittleCmsNet.CmsCurveStruct __result0;
+                if (((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg))
+                    __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg];
+                else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Bg);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsUcrBg.__Internal*)__Instance)->Bg = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsUcrBg.__Internal*)__Instance)->Bg = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsMLU_struct Desc
+        public global::LittleCmsNet.CmsMLU_struct Desc
         {
             get
             {
-                global::LitteCmsNet.CmsMLU_struct __result0;
-                if (((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc))
-                    __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc];
-                else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(((global::LitteCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc);
+                global::LittleCmsNet.CmsMLU_struct __result0;
+                if (((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc))
+                    __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc];
+                else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(((global::LittleCmsNet.CmsUcrBg.__Internal*) __Instance)->Desc);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsUcrBg.__Internal*)__Instance)->Desc = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsUcrBg.__Internal*)__Instance)->Desc = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
     }
@@ -3584,29 +3584,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsScreeningChannel> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsScreeningChannel>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsScreeningChannel> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsScreeningChannel>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsScreeningChannel __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsScreeningChannel __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsScreeningChannel(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsScreeningChannel(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsScreeningChannel __CreateInstance(global::LitteCmsNet.CmsScreeningChannel.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsScreeningChannel __CreateInstance(global::LittleCmsNet.CmsScreeningChannel.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsScreeningChannel(native, skipVTables);
+            return new global::LittleCmsNet.CmsScreeningChannel(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsScreeningChannel.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsScreeningChannel.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsScreeningChannel.__Internal));
-            *(global::LitteCmsNet.CmsScreeningChannel.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsScreeningChannel.__Internal));
+            *(global::LittleCmsNet.CmsScreeningChannel.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsScreeningChannel(global::LitteCmsNet.CmsScreeningChannel.__Internal native, bool skipVTables = false)
+        private CmsScreeningChannel(global::LittleCmsNet.CmsScreeningChannel.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -3622,17 +3622,17 @@ namespace LitteCmsNet
 
         public CmsScreeningChannel()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsScreeningChannel.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsScreeningChannel.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsScreeningChannel(global::LitteCmsNet.CmsScreeningChannel _0)
+        public CmsScreeningChannel(global::LittleCmsNet.CmsScreeningChannel _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsScreeningChannel.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsScreeningChannel.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsScreeningChannel.__Internal*) __Instance) = *((global::LitteCmsNet.CmsScreeningChannel.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsScreeningChannel.__Internal*) __Instance) = *((global::LittleCmsNet.CmsScreeningChannel.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -3644,7 +3644,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsScreeningChannel __dummy;
+            global::LittleCmsNet.CmsScreeningChannel __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -3655,12 +3655,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsScreeningChannel.__Internal*) __Instance)->Frequency;
+                return ((global::LittleCmsNet.CmsScreeningChannel.__Internal*) __Instance)->Frequency;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsScreeningChannel.__Internal*)__Instance)->Frequency = value;
+                ((global::LittleCmsNet.CmsScreeningChannel.__Internal*)__Instance)->Frequency = value;
             }
         }
 
@@ -3668,12 +3668,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsScreeningChannel.__Internal*) __Instance)->ScreenAngle;
+                return ((global::LittleCmsNet.CmsScreeningChannel.__Internal*) __Instance)->ScreenAngle;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsScreeningChannel.__Internal*)__Instance)->ScreenAngle = value;
+                ((global::LittleCmsNet.CmsScreeningChannel.__Internal*)__Instance)->ScreenAngle = value;
             }
         }
 
@@ -3681,12 +3681,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsScreeningChannel.__Internal*) __Instance)->SpotShape;
+                return ((global::LittleCmsNet.CmsScreeningChannel.__Internal*) __Instance)->SpotShape;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsScreeningChannel.__Internal*)__Instance)->SpotShape = value;
+                ((global::LittleCmsNet.CmsScreeningChannel.__Internal*)__Instance)->SpotShape = value;
             }
         }
     }
@@ -3714,29 +3714,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsScreening> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsScreening>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsScreening> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsScreening>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsScreening __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsScreening __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsScreening(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsScreening(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsScreening __CreateInstance(global::LitteCmsNet.CmsScreening.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsScreening __CreateInstance(global::LittleCmsNet.CmsScreening.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsScreening(native, skipVTables);
+            return new global::LittleCmsNet.CmsScreening(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsScreening.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsScreening.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsScreening.__Internal));
-            *(global::LitteCmsNet.CmsScreening.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsScreening.__Internal));
+            *(global::LittleCmsNet.CmsScreening.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsScreening(global::LitteCmsNet.CmsScreening.__Internal native, bool skipVTables = false)
+        private CmsScreening(global::LittleCmsNet.CmsScreening.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -3752,17 +3752,17 @@ namespace LitteCmsNet
 
         public CmsScreening()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsScreening.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsScreening.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsScreening(global::LitteCmsNet.CmsScreening _0)
+        public CmsScreening(global::LittleCmsNet.CmsScreening _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsScreening.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsScreening.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsScreening.__Internal*) __Instance) = *((global::LitteCmsNet.CmsScreening.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsScreening.__Internal*) __Instance) = *((global::LittleCmsNet.CmsScreening.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -3774,7 +3774,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsScreening __dummy;
+            global::LittleCmsNet.CmsScreening __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -3785,12 +3785,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsScreening.__Internal*) __Instance)->Flag;
+                return ((global::LittleCmsNet.CmsScreening.__Internal*) __Instance)->Flag;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsScreening.__Internal*)__Instance)->Flag = value;
+                ((global::LittleCmsNet.CmsScreening.__Internal*)__Instance)->Flag = value;
             }
         }
 
@@ -3798,25 +3798,25 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsScreening.__Internal*) __Instance)->nChannels;
+                return ((global::LittleCmsNet.CmsScreening.__Internal*) __Instance)->nChannels;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsScreening.__Internal*)__Instance)->nChannels = value;
+                ((global::LittleCmsNet.CmsScreening.__Internal*)__Instance)->nChannels = value;
             }
         }
 
-        public global::LitteCmsNet.CmsScreeningChannel[] Channels
+        public global::LittleCmsNet.CmsScreeningChannel[] Channels
         {
             get
             {
-                global::LitteCmsNet.CmsScreeningChannel[] __value = null;
-                if (((global::LitteCmsNet.CmsScreening.__Internal*) __Instance)->Channels != null)
+                global::LittleCmsNet.CmsScreeningChannel[] __value = null;
+                if (((global::LittleCmsNet.CmsScreening.__Internal*) __Instance)->Channels != null)
                 {
-                    __value = new global::LitteCmsNet.CmsScreeningChannel[16];
+                    __value = new global::LittleCmsNet.CmsScreeningChannel[16];
                     for (int i = 0; i < 16; i++)
-                        __value[i] = global::LitteCmsNet.CmsScreeningChannel.__CreateInstance(*((global::LitteCmsNet.CmsScreeningChannel.__Internal*)&(((global::LitteCmsNet.CmsScreening.__Internal*) __Instance)->Channels[i * sizeof(global::LitteCmsNet.CmsScreeningChannel.__Internal)])));
+                        __value[i] = global::LittleCmsNet.CmsScreeningChannel.__CreateInstance(*((global::LittleCmsNet.CmsScreeningChannel.__Internal*)&(((global::LittleCmsNet.CmsScreening.__Internal*) __Instance)->Channels[i * sizeof(global::LittleCmsNet.CmsScreeningChannel.__Internal)])));
                 }
                 return __value;
             }
@@ -3828,7 +3828,7 @@ namespace LitteCmsNet
                     if (value.Length != 16)
                         throw new ArgumentOutOfRangeException("value", "The dimensions of the provided array don't match the required size.");
                     for (int i = 0; i < 16; i++)
-                        *(global::LitteCmsNet.CmsScreeningChannel.__Internal*) &((global::LitteCmsNet.CmsScreening.__Internal*)__Instance)->Channels[i * sizeof(global::LitteCmsNet.CmsScreeningChannel.__Internal)] = *(global::LitteCmsNet.CmsScreeningChannel.__Internal*)value[i].__Instance;
+                        *(global::LittleCmsNet.CmsScreeningChannel.__Internal*) &((global::LittleCmsNet.CmsScreening.__Internal*)__Instance)->Channels[i * sizeof(global::LittleCmsNet.CmsScreeningChannel.__Internal)] = *(global::LittleCmsNet.CmsScreeningChannel.__Internal*)value[i].__Instance;
                 }
             }
         }
@@ -3849,10 +3849,10 @@ namespace LitteCmsNet
             internal ulong attributes;
 
             [FieldOffset(16)]
-            internal global::LitteCmsNet.CmsTechnologySignature technology;
+            internal global::LittleCmsNet.CmsTechnologySignature technology;
 
             [FieldOffset(20)]
-            internal global::LitteCmsNet.CmsProfileID.__Internal ProfileID;
+            internal global::LittleCmsNet.CmsProfileID.__Internal ProfileID;
 
             [FieldOffset(40)]
             internal global::System.IntPtr Manufacturer;
@@ -3872,29 +3872,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsPSEQDESC> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsPSEQDESC>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsPSEQDESC> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsPSEQDESC>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsPSEQDESC __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsPSEQDESC __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsPSEQDESC(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsPSEQDESC(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsPSEQDESC __CreateInstance(global::LitteCmsNet.CmsPSEQDESC.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsPSEQDESC __CreateInstance(global::LittleCmsNet.CmsPSEQDESC.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsPSEQDESC(native, skipVTables);
+            return new global::LittleCmsNet.CmsPSEQDESC(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsPSEQDESC.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsPSEQDESC.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsPSEQDESC.__Internal));
-            *(global::LitteCmsNet.CmsPSEQDESC.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsPSEQDESC.__Internal));
+            *(global::LittleCmsNet.CmsPSEQDESC.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsPSEQDESC(global::LitteCmsNet.CmsPSEQDESC.__Internal native, bool skipVTables = false)
+        private CmsPSEQDESC(global::LittleCmsNet.CmsPSEQDESC.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -3910,17 +3910,17 @@ namespace LitteCmsNet
 
         public CmsPSEQDESC()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsPSEQDESC.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsPSEQDESC.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsPSEQDESC(global::LitteCmsNet.CmsPSEQDESC _0)
+        public CmsPSEQDESC(global::LittleCmsNet.CmsPSEQDESC _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsPSEQDESC.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsPSEQDESC.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance) = *((global::LitteCmsNet.CmsPSEQDESC.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance) = *((global::LittleCmsNet.CmsPSEQDESC.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -3932,7 +3932,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsPSEQDESC __dummy;
+            global::LittleCmsNet.CmsPSEQDESC __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -3943,12 +3943,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->deviceMfg;
+                return ((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->deviceMfg;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->deviceMfg = value;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->deviceMfg = value;
             }
         }
 
@@ -3956,12 +3956,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->deviceModel;
+                return ((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->deviceModel;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->deviceModel = value;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->deviceModel = value;
             }
         }
 
@@ -3969,92 +3969,92 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->attributes;
+                return ((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->attributes;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->attributes = value;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->attributes = value;
             }
         }
 
-        public global::LitteCmsNet.CmsTechnologySignature Technology
+        public global::LittleCmsNet.CmsTechnologySignature Technology
         {
             get
             {
-                return ((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->technology;
+                return ((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->technology;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->technology = value;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->technology = value;
             }
         }
 
-        public global::LitteCmsNet.CmsProfileID ProfileID
+        public global::LittleCmsNet.CmsProfileID ProfileID
         {
             get
             {
-                return global::LitteCmsNet.CmsProfileID.__CreateInstance(((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->ProfileID);
+                return global::LittleCmsNet.CmsProfileID.__CreateInstance(((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->ProfileID);
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->ProfileID = value.__Instance;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->ProfileID = value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsMLU_struct Manufacturer
+        public global::LittleCmsNet.CmsMLU_struct Manufacturer
         {
             get
             {
-                global::LitteCmsNet.CmsMLU_struct __result0;
-                if (((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer))
-                    __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer];
-                else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer);
+                global::LittleCmsNet.CmsMLU_struct __result0;
+                if (((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer))
+                    __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer];
+                else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Manufacturer);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->Manufacturer = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->Manufacturer = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsMLU_struct Model
+        public global::LittleCmsNet.CmsMLU_struct Model
         {
             get
             {
-                global::LitteCmsNet.CmsMLU_struct __result0;
-                if (((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model))
-                    __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model];
-                else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model);
+                global::LittleCmsNet.CmsMLU_struct __result0;
+                if (((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model))
+                    __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model];
+                else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Model);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->Model = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->Model = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsMLU_struct Description
+        public global::LittleCmsNet.CmsMLU_struct Description
         {
             get
             {
-                global::LitteCmsNet.CmsMLU_struct __result0;
-                if (((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description))
-                    __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description];
-                else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(((global::LitteCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description);
+                global::LittleCmsNet.CmsMLU_struct __result0;
+                if (((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description))
+                    __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description];
+                else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(((global::LittleCmsNet.CmsPSEQDESC.__Internal*) __Instance)->Description);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsPSEQDESC.__Internal*)__Instance)->Description = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsPSEQDESC.__Internal*)__Instance)->Description = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
     }
@@ -4082,29 +4082,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsSEQ> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsSEQ>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsSEQ> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsSEQ>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsSEQ __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsSEQ __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsSEQ(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsSEQ(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsSEQ __CreateInstance(global::LitteCmsNet.CmsSEQ.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsSEQ __CreateInstance(global::LittleCmsNet.CmsSEQ.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsSEQ(native, skipVTables);
+            return new global::LittleCmsNet.CmsSEQ(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsSEQ.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsSEQ.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsSEQ.__Internal));
-            *(global::LitteCmsNet.CmsSEQ.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsSEQ.__Internal));
+            *(global::LittleCmsNet.CmsSEQ.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsSEQ(global::LitteCmsNet.CmsSEQ.__Internal native, bool skipVTables = false)
+        private CmsSEQ(global::LittleCmsNet.CmsSEQ.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4120,17 +4120,17 @@ namespace LitteCmsNet
 
         public CmsSEQ()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsSEQ.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsSEQ.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsSEQ(global::LitteCmsNet.CmsSEQ _0)
+        public CmsSEQ(global::LittleCmsNet.CmsSEQ _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsSEQ.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsSEQ.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance) = *((global::LitteCmsNet.CmsSEQ.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance) = *((global::LittleCmsNet.CmsSEQ.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -4142,7 +4142,7 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsSEQ __dummy;
+            global::LittleCmsNet.CmsSEQ __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -4153,48 +4153,48 @@ namespace LitteCmsNet
         {
             get
             {
-                return ((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->n;
+                return ((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->n;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsSEQ.__Internal*)__Instance)->n = value;
+                ((global::LittleCmsNet.CmsSEQ.__Internal*)__Instance)->n = value;
             }
         }
 
-        public global::LitteCmsNet.CmsContextStruct ContextID
+        public global::LittleCmsNet.CmsContextStruct ContextID
         {
             get
             {
-                global::LitteCmsNet.CmsContextStruct __result0;
-                if (((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID))
-                    __result0 = (global::LitteCmsNet.CmsContextStruct) global::LitteCmsNet.CmsContextStruct.NativeToManagedMap[((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID];
-                else __result0 = global::LitteCmsNet.CmsContextStruct.__CreateInstance(((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID);
+                global::LittleCmsNet.CmsContextStruct __result0;
+                if (((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID))
+                    __result0 = (global::LittleCmsNet.CmsContextStruct) global::LittleCmsNet.CmsContextStruct.NativeToManagedMap[((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID];
+                else __result0 = global::LittleCmsNet.CmsContextStruct.__CreateInstance(((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->ContextID);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsSEQ.__Internal*)__Instance)->ContextID = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsSEQ.__Internal*)__Instance)->ContextID = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsPSEQDESC Seq
+        public global::LittleCmsNet.CmsPSEQDESC Seq
         {
             get
             {
-                global::LitteCmsNet.CmsPSEQDESC __result0;
-                if (((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->seq == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsPSEQDESC.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->seq))
-                    __result0 = (global::LitteCmsNet.CmsPSEQDESC) global::LitteCmsNet.CmsPSEQDESC.NativeToManagedMap[((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->seq];
-                else __result0 = global::LitteCmsNet.CmsPSEQDESC.__CreateInstance(((global::LitteCmsNet.CmsSEQ.__Internal*) __Instance)->seq);
+                global::LittleCmsNet.CmsPSEQDESC __result0;
+                if (((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->seq == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsPSEQDESC.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->seq))
+                    __result0 = (global::LittleCmsNet.CmsPSEQDESC) global::LittleCmsNet.CmsPSEQDESC.NativeToManagedMap[((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->seq];
+                else __result0 = global::LittleCmsNet.CmsPSEQDESC.__CreateInstance(((global::LittleCmsNet.CmsSEQ.__Internal*) __Instance)->seq);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsSEQ.__Internal*)__Instance)->seq = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsSEQ.__Internal*)__Instance)->seq = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
     }
@@ -4228,29 +4228,29 @@ namespace LitteCmsNet
         public global::System.IntPtr __Instance { get; protected set; }
 
         protected int __PointerAdjustment;
-        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsDICTentryStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LitteCmsNet.CmsDICTentryStruct>();
+        internal static readonly global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsDICTentryStruct> NativeToManagedMap = new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::LittleCmsNet.CmsDICTentryStruct>();
         protected internal void*[] __OriginalVTables;
 
         protected bool __ownsNativeInstance;
 
-        internal static global::LitteCmsNet.CmsDICTentryStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsDICTentryStruct __CreateInstance(global::System.IntPtr native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsDICTentryStruct(native.ToPointer(), skipVTables);
+            return new global::LittleCmsNet.CmsDICTentryStruct(native.ToPointer(), skipVTables);
         }
 
-        internal static global::LitteCmsNet.CmsDICTentryStruct __CreateInstance(global::LitteCmsNet.CmsDICTentryStruct.__Internal native, bool skipVTables = false)
+        internal static global::LittleCmsNet.CmsDICTentryStruct __CreateInstance(global::LittleCmsNet.CmsDICTentryStruct.__Internal native, bool skipVTables = false)
         {
-            return new global::LitteCmsNet.CmsDICTentryStruct(native, skipVTables);
+            return new global::LittleCmsNet.CmsDICTentryStruct(native, skipVTables);
         }
 
-        private static void* __CopyValue(global::LitteCmsNet.CmsDICTentryStruct.__Internal native)
+        private static void* __CopyValue(global::LittleCmsNet.CmsDICTentryStruct.__Internal native)
         {
-            var ret = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsDICTentryStruct.__Internal));
-            *(global::LitteCmsNet.CmsDICTentryStruct.__Internal*) ret = native;
+            var ret = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsDICTentryStruct.__Internal));
+            *(global::LittleCmsNet.CmsDICTentryStruct.__Internal*) ret = native;
             return ret.ToPointer();
         }
 
-        private CmsDICTentryStruct(global::LitteCmsNet.CmsDICTentryStruct.__Internal native, bool skipVTables = false)
+        private CmsDICTentryStruct(global::LittleCmsNet.CmsDICTentryStruct.__Internal native, bool skipVTables = false)
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
@@ -4266,17 +4266,17 @@ namespace LitteCmsNet
 
         public CmsDICTentryStruct()
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsDICTentryStruct.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsDICTentryStruct.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
         }
 
-        public CmsDICTentryStruct(global::LitteCmsNet.CmsDICTentryStruct _0)
+        public CmsDICTentryStruct(global::LittleCmsNet.CmsDICTentryStruct _0)
         {
-            __Instance = Marshal.AllocHGlobal(sizeof(global::LitteCmsNet.CmsDICTentryStruct.__Internal));
+            __Instance = Marshal.AllocHGlobal(sizeof(global::LittleCmsNet.CmsDICTentryStruct.__Internal));
             __ownsNativeInstance = true;
             NativeToManagedMap[__Instance] = this;
-            *((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance) = *((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) _0.__Instance);
+            *((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance) = *((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) _0.__Instance);
         }
 
         public void Dispose()
@@ -4288,64 +4288,64 @@ namespace LitteCmsNet
         {
             if (__Instance == IntPtr.Zero)
                 return;
-            global::LitteCmsNet.CmsDICTentryStruct __dummy;
+            global::LittleCmsNet.CmsDICTentryStruct __dummy;
             NativeToManagedMap.TryRemove(__Instance, out __dummy);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
             __Instance = IntPtr.Zero;
         }
 
-        public global::LitteCmsNet.CmsDICTentryStruct Next
+        public global::LittleCmsNet.CmsDICTentryStruct Next
         {
             get
             {
-                global::LitteCmsNet.CmsDICTentryStruct __result0;
-                if (((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsDICTentryStruct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next))
-                    __result0 = (global::LitteCmsNet.CmsDICTentryStruct) global::LitteCmsNet.CmsDICTentryStruct.NativeToManagedMap[((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next];
-                else __result0 = global::LitteCmsNet.CmsDICTentryStruct.__CreateInstance(((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next);
+                global::LittleCmsNet.CmsDICTentryStruct __result0;
+                if (((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsDICTentryStruct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next))
+                    __result0 = (global::LittleCmsNet.CmsDICTentryStruct) global::LittleCmsNet.CmsDICTentryStruct.NativeToManagedMap[((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next];
+                else __result0 = global::LittleCmsNet.CmsDICTentryStruct.__CreateInstance(((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Next);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->Next = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->Next = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsMLU_struct DisplayName
+        public global::LittleCmsNet.CmsMLU_struct DisplayName
         {
             get
             {
-                global::LitteCmsNet.CmsMLU_struct __result0;
-                if (((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName))
-                    __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName];
-                else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName);
+                global::LittleCmsNet.CmsMLU_struct __result0;
+                if (((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName))
+                    __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName];
+                else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayName);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->DisplayName = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->DisplayName = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
-        public global::LitteCmsNet.CmsMLU_struct DisplayValue
+        public global::LittleCmsNet.CmsMLU_struct DisplayValue
         {
             get
             {
-                global::LitteCmsNet.CmsMLU_struct __result0;
-                if (((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue))
-                    __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue];
-                else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue);
+                global::LittleCmsNet.CmsMLU_struct __result0;
+                if (((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue == IntPtr.Zero) __result0 = null;
+                else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue))
+                    __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue];
+                else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->DisplayValue);
                 return __result0;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->DisplayValue = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
+                ((global::LittleCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->DisplayValue = ReferenceEquals(value, null) ? global::System.IntPtr.Zero : value.__Instance;
             }
         }
 
@@ -4353,12 +4353,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return (char*) ((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Name;
+                return (char*) ((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Name;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->Name = (global::System.IntPtr) value;
+                ((global::LittleCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->Name = (global::System.IntPtr) value;
             }
         }
 
@@ -4366,12 +4366,12 @@ namespace LitteCmsNet
         {
             get
             {
-                return (char*) ((global::LitteCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Value;
+                return (char*) ((global::LittleCmsNet.CmsDICTentryStruct.__Internal*) __Instance)->Value;
             }
 
             set
             {
-                ((global::LitteCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->Value = (global::System.IntPtr) value;
+                ((global::LittleCmsNet.CmsDICTentryStruct.__Internal*)__Instance)->Value = (global::System.IntPtr) value;
             }
         }
     }
@@ -4573,7 +4573,7 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsBuildSegmentedToneCurve")]
-            internal static extern global::System.IntPtr CmsBuildSegmentedToneCurve(global::System.IntPtr ContextID, uint nSegments, global::LitteCmsNet.CmsCurveSegment.__Internal[] Segments);
+            internal static extern global::System.IntPtr CmsBuildSegmentedToneCurve(global::System.IntPtr ContextID, uint nSegments, global::LittleCmsNet.CmsCurveSegment.__Internal[] Segments);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -4753,12 +4753,12 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsPipelineInsertStage")]
-            internal static extern int CmsPipelineInsertStage(global::System.IntPtr lut, global::LitteCmsNet.CmsStageLoc loc, global::System.IntPtr mpe);
+            internal static extern int CmsPipelineInsertStage(global::System.IntPtr lut, global::LittleCmsNet.CmsStageLoc loc, global::System.IntPtr mpe);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsPipelineUnlinkStage")]
-            internal static extern void CmsPipelineUnlinkStage(global::System.IntPtr lut, global::LitteCmsNet.CmsStageLoc loc, global::System.IntPtr mpe);
+            internal static extern void CmsPipelineUnlinkStage(global::System.IntPtr lut, global::LittleCmsNet.CmsStageLoc loc, global::System.IntPtr mpe);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -4828,7 +4828,7 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsStageType")]
-            internal static extern global::LitteCmsNet.CmsStageSignature CmsStageType(global::System.IntPtr mpe);
+            internal static extern global::LittleCmsNet.CmsStageSignature CmsStageType(global::System.IntPtr mpe);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5008,42 +5008,42 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsGetTagSignature")]
-            internal static extern global::LitteCmsNet.CmsTagSignature CmsGetTagSignature(global::System.IntPtr hProfile, uint n);
+            internal static extern global::LittleCmsNet.CmsTagSignature CmsGetTagSignature(global::System.IntPtr hProfile, uint n);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsIsTag")]
-            internal static extern int CmsIsTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig);
+            internal static extern int CmsIsTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsReadTag")]
-            internal static extern global::System.IntPtr CmsReadTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig);
+            internal static extern global::System.IntPtr CmsReadTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsWriteTag")]
-            internal static extern int CmsWriteTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::System.IntPtr data);
+            internal static extern int CmsWriteTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::System.IntPtr data);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsLinkTag")]
-            internal static extern int CmsLinkTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::LitteCmsNet.CmsTagSignature dest);
+            internal static extern int CmsLinkTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::LittleCmsNet.CmsTagSignature dest);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsTagLinkedTo")]
-            internal static extern global::LitteCmsNet.CmsTagSignature CmsTagLinkedTo(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig);
+            internal static extern global::LittleCmsNet.CmsTagSignature CmsTagLinkedTo(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsReadRawTag")]
-            internal static extern uint CmsReadRawTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::System.IntPtr Buffer, uint BufferSize);
+            internal static extern uint CmsReadRawTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::System.IntPtr Buffer, uint BufferSize);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsWriteRawTag")]
-            internal static extern int CmsWriteRawTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::System.IntPtr data, uint Size);
+            internal static extern int CmsWriteRawTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::System.IntPtr data, uint Size);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5113,32 +5113,32 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsGetPCS")]
-            internal static extern global::LitteCmsNet.CmsColorSpaceSignature CmsGetPCS(global::System.IntPtr hProfile);
+            internal static extern global::LittleCmsNet.CmsColorSpaceSignature CmsGetPCS(global::System.IntPtr hProfile);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsSetPCS")]
-            internal static extern void CmsSetPCS(global::System.IntPtr hProfile, global::LitteCmsNet.CmsColorSpaceSignature pcs);
+            internal static extern void CmsSetPCS(global::System.IntPtr hProfile, global::LittleCmsNet.CmsColorSpaceSignature pcs);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsGetColorSpace")]
-            internal static extern global::LitteCmsNet.CmsColorSpaceSignature CmsGetColorSpace(global::System.IntPtr hProfile);
+            internal static extern global::LittleCmsNet.CmsColorSpaceSignature CmsGetColorSpace(global::System.IntPtr hProfile);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsSetColorSpace")]
-            internal static extern void CmsSetColorSpace(global::System.IntPtr hProfile, global::LitteCmsNet.CmsColorSpaceSignature sig);
+            internal static extern void CmsSetColorSpace(global::System.IntPtr hProfile, global::LittleCmsNet.CmsColorSpaceSignature sig);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsGetDeviceClass")]
-            internal static extern global::LitteCmsNet.CmsProfileClassSignature CmsGetDeviceClass(global::System.IntPtr hProfile);
+            internal static extern global::LittleCmsNet.CmsProfileClassSignature CmsGetDeviceClass(global::System.IntPtr hProfile);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsSetDeviceClass")]
-            internal static extern void CmsSetDeviceClass(global::System.IntPtr hProfile, global::LitteCmsNet.CmsProfileClassSignature sig);
+            internal static extern void CmsSetDeviceClass(global::System.IntPtr hProfile, global::LittleCmsNet.CmsProfileClassSignature sig);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5178,17 +5178,17 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="_cmsICCcolorSpace")]
-            internal static extern global::LitteCmsNet.CmsColorSpaceSignature CmsICCcolorSpace(int OurNotation);
+            internal static extern global::LittleCmsNet.CmsColorSpaceSignature CmsICCcolorSpace(int OurNotation);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="_cmsLCMScolorSpace")]
-            internal static extern int CmsLCMScolorSpace(global::LitteCmsNet.CmsColorSpaceSignature ProfileSpace);
+            internal static extern int CmsLCMScolorSpace(global::LittleCmsNet.CmsColorSpaceSignature ProfileSpace);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsChannelsOf")]
-            internal static extern uint CmsChannelsOf(global::LitteCmsNet.CmsColorSpaceSignature ColorSpace);
+            internal static extern uint CmsChannelsOf(global::LittleCmsNet.CmsColorSpaceSignature ColorSpace);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5203,12 +5203,12 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsGetProfileInfo")]
-            internal static extern uint CmsGetProfileInfo(global::System.IntPtr hProfile, global::LitteCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, char* Buffer, uint BufferSize);
+            internal static extern uint CmsGetProfileInfo(global::System.IntPtr hProfile, global::LittleCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, char* Buffer, uint BufferSize);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsGetProfileInfoASCII")]
-            internal static extern uint CmsGetProfileInfoASCII(global::System.IntPtr hProfile, global::LitteCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte* Buffer, uint BufferSize);
+            internal static extern uint CmsGetProfileInfoASCII(global::System.IntPtr hProfile, global::LittleCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte* Buffer, uint BufferSize);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5313,22 +5313,22 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsCreateLinearizationDeviceLinkTHR")]
-            internal static extern global::System.IntPtr CmsCreateLinearizationDeviceLinkTHR(global::System.IntPtr ContextID, global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, global::System.IntPtr[] TransferFunctions);
+            internal static extern global::System.IntPtr CmsCreateLinearizationDeviceLinkTHR(global::System.IntPtr ContextID, global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, global::System.IntPtr[] TransferFunctions);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsCreateLinearizationDeviceLink")]
-            internal static extern global::System.IntPtr CmsCreateLinearizationDeviceLink(global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, global::System.IntPtr[] TransferFunctions);
+            internal static extern global::System.IntPtr CmsCreateLinearizationDeviceLink(global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, global::System.IntPtr[] TransferFunctions);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsCreateInkLimitingDeviceLinkTHR")]
-            internal static extern global::System.IntPtr CmsCreateInkLimitingDeviceLinkTHR(global::System.IntPtr ContextID, global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, double Limit);
+            internal static extern global::System.IntPtr CmsCreateInkLimitingDeviceLinkTHR(global::System.IntPtr ContextID, global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, double Limit);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsCreateInkLimitingDeviceLink")]
-            internal static extern global::System.IntPtr CmsCreateInkLimitingDeviceLink(global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, double Limit);
+            internal static extern global::System.IntPtr CmsCreateInkLimitingDeviceLink(global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, double Limit);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5513,7 +5513,7 @@ namespace LitteCmsNet
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
                 EntryPoint="cmsGetPostScriptColorResource")]
-            internal static extern uint CmsGetPostScriptColorResource(global::System.IntPtr ContextID, global::LitteCmsNet.CmsPSResourceType Type, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::System.IntPtr io);
+            internal static extern uint CmsGetPostScriptColorResource(global::System.IntPtr ContextID, global::LittleCmsNet.CmsPSResourceType Type, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::System.IntPtr io);
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport("lcms2", CallingConvention = global::System.Runtime.InteropServices.CallingConvention.Cdecl,
@@ -5768,36 +5768,36 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsContextStruct CmsCreateContext(global::System.IntPtr Plugin, global::System.IntPtr UserData)
+        public static global::LittleCmsNet.CmsContextStruct CmsCreateContext(global::System.IntPtr Plugin, global::System.IntPtr UserData)
         {
             var __ret = __Internal.CmsCreateContext(Plugin, UserData);
-            global::LitteCmsNet.CmsContextStruct __result0;
+            global::LittleCmsNet.CmsContextStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsContextStruct) global::LitteCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsContextStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsContextStruct) global::LittleCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsContextStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsDeleteContext(global::LitteCmsNet.CmsContextStruct ContexID)
+        public static void CmsDeleteContext(global::LittleCmsNet.CmsContextStruct ContexID)
         {
             var __arg0 = ReferenceEquals(ContexID, null) ? global::System.IntPtr.Zero : ContexID.__Instance;
             __Internal.CmsDeleteContext(__arg0);
         }
 
-        public static global::LitteCmsNet.CmsContextStruct CmsDupContext(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr NewUserData)
+        public static global::LittleCmsNet.CmsContextStruct CmsDupContext(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr NewUserData)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsDupContext(__arg0, NewUserData);
-            global::LitteCmsNet.CmsContextStruct __result0;
+            global::LittleCmsNet.CmsContextStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsContextStruct) global::LitteCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsContextStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsContextStruct) global::LittleCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsContextStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::System.IntPtr CmsGetContextUserData(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsGetContextUserData(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsGetContextUserData(__arg0);
@@ -5810,7 +5810,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsPluginTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr Plugin)
+        public static int CmsPluginTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr Plugin)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsPluginTHR(__arg0, Plugin);
@@ -5822,62 +5822,62 @@ namespace LitteCmsNet
             __Internal.CmsUnregisterPlugins();
         }
 
-        public static void CmsUnregisterPluginsTHR(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static void CmsUnregisterPluginsTHR(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             __Internal.CmsUnregisterPluginsTHR(__arg0);
         }
 
-        public static void CmsSetLogErrorHandler(global::LitteCmsNet.CmsLogErrorHandlerFunction Fn)
+        public static void CmsSetLogErrorHandler(global::LittleCmsNet.CmsLogErrorHandlerFunction Fn)
         {
             var __arg0 = Fn == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(Fn);
             __Internal.CmsSetLogErrorHandler(__arg0);
         }
 
-        public static void CmsSetLogErrorHandlerTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsLogErrorHandlerFunction Fn)
+        public static void CmsSetLogErrorHandlerTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsLogErrorHandlerFunction Fn)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = Fn == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(Fn);
             __Internal.CmsSetLogErrorHandlerTHR(__arg0, __arg1);
         }
 
-        public static global::LitteCmsNet.CmsCIEXYZ CmsD50XYZ()
+        public static global::LittleCmsNet.CmsCIEXYZ CmsD50XYZ()
         {
             var __ret = __Internal.CmsD50XYZ();
-            global::LitteCmsNet.CmsCIEXYZ __result0;
+            global::LittleCmsNet.CmsCIEXYZ __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCIEXYZ.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCIEXYZ) global::LitteCmsNet.CmsCIEXYZ.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCIEXYZ.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCIEXYZ.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCIEXYZ) global::LittleCmsNet.CmsCIEXYZ.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCIEXYZ.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCIExyY CmsD50XyY()
+        public static global::LittleCmsNet.CmsCIExyY CmsD50XyY()
         {
             var __ret = __Internal.CmsD50XyY();
-            global::LitteCmsNet.CmsCIExyY __result0;
+            global::LittleCmsNet.CmsCIExyY __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCIExyY.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCIExyY) global::LitteCmsNet.CmsCIExyY.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCIExyY.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCIExyY.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCIExyY) global::LittleCmsNet.CmsCIExyY.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCIExyY.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsXYZ2xyY(global::LitteCmsNet.CmsCIExyY Dest, global::LitteCmsNet.CmsCIEXYZ Source)
+        public static void CmsXYZ2xyY(global::LittleCmsNet.CmsCIExyY Dest, global::LittleCmsNet.CmsCIEXYZ Source)
         {
             var __arg0 = ReferenceEquals(Dest, null) ? global::System.IntPtr.Zero : Dest.__Instance;
             var __arg1 = ReferenceEquals(Source, null) ? global::System.IntPtr.Zero : Source.__Instance;
             __Internal.CmsXYZ2xyY(__arg0, __arg1);
         }
 
-        public static void CmsxyY2XYZ(global::LitteCmsNet.CmsCIEXYZ Dest, global::LitteCmsNet.CmsCIExyY Source)
+        public static void CmsxyY2XYZ(global::LittleCmsNet.CmsCIEXYZ Dest, global::LittleCmsNet.CmsCIExyY Source)
         {
             var __arg0 = ReferenceEquals(Dest, null) ? global::System.IntPtr.Zero : Dest.__Instance;
             var __arg1 = ReferenceEquals(Source, null) ? global::System.IntPtr.Zero : Source.__Instance;
             __Internal.CmsxyY2XYZ(__arg0, __arg1);
         }
 
-        public static void CmsXYZ2Lab(global::LitteCmsNet.CmsCIEXYZ WhitePoint, global::LitteCmsNet.CmsCIELab Lab, global::LitteCmsNet.CmsCIEXYZ xyz)
+        public static void CmsXYZ2Lab(global::LittleCmsNet.CmsCIEXYZ WhitePoint, global::LittleCmsNet.CmsCIELab Lab, global::LittleCmsNet.CmsCIEXYZ xyz)
         {
             var __arg0 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
             var __arg1 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
@@ -5885,7 +5885,7 @@ namespace LitteCmsNet
             __Internal.CmsXYZ2Lab(__arg0, __arg1, __arg2);
         }
 
-        public static void CmsLab2XYZ(global::LitteCmsNet.CmsCIEXYZ WhitePoint, global::LitteCmsNet.CmsCIEXYZ xyz, global::LitteCmsNet.CmsCIELab Lab)
+        public static void CmsLab2XYZ(global::LittleCmsNet.CmsCIEXYZ WhitePoint, global::LittleCmsNet.CmsCIEXYZ xyz, global::LittleCmsNet.CmsCIELab Lab)
         {
             var __arg0 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
             var __arg1 = ReferenceEquals(xyz, null) ? global::System.IntPtr.Zero : xyz.__Instance;
@@ -5893,21 +5893,21 @@ namespace LitteCmsNet
             __Internal.CmsLab2XYZ(__arg0, __arg1, __arg2);
         }
 
-        public static void CmsLab2LCh(global::LitteCmsNet.CmsCIELCh LCh, global::LitteCmsNet.CmsCIELab Lab)
+        public static void CmsLab2LCh(global::LittleCmsNet.CmsCIELCh LCh, global::LittleCmsNet.CmsCIELab Lab)
         {
             var __arg0 = ReferenceEquals(LCh, null) ? global::System.IntPtr.Zero : LCh.__Instance;
             var __arg1 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
             __Internal.CmsLab2LCh(__arg0, __arg1);
         }
 
-        public static void CmsLCh2Lab(global::LitteCmsNet.CmsCIELab Lab, global::LitteCmsNet.CmsCIELCh LCh)
+        public static void CmsLCh2Lab(global::LittleCmsNet.CmsCIELab Lab, global::LittleCmsNet.CmsCIELCh LCh)
         {
             var __arg0 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
             var __arg1 = ReferenceEquals(LCh, null) ? global::System.IntPtr.Zero : LCh.__Instance;
             __Internal.CmsLCh2Lab(__arg0, __arg1);
         }
 
-        public static void CmsLabEncoded2Float(global::LitteCmsNet.CmsCIELab Lab, ushort[] wLab)
+        public static void CmsLabEncoded2Float(global::LittleCmsNet.CmsCIELab Lab, ushort[] wLab)
         {
             var __arg0 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
             if (wLab == null || wLab.Length != 3)
@@ -5915,7 +5915,7 @@ namespace LitteCmsNet
             __Internal.CmsLabEncoded2Float(__arg0, wLab);
         }
 
-        public static void CmsLabEncoded2FloatV2(global::LitteCmsNet.CmsCIELab Lab, ushort[] wLab)
+        public static void CmsLabEncoded2FloatV2(global::LittleCmsNet.CmsCIELab Lab, ushort[] wLab)
         {
             var __arg0 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
             if (wLab == null || wLab.Length != 3)
@@ -5923,7 +5923,7 @@ namespace LitteCmsNet
             __Internal.CmsLabEncoded2FloatV2(__arg0, wLab);
         }
 
-        public static void CmsFloat2LabEncoded(ushort[] wLab, global::LitteCmsNet.CmsCIELab Lab)
+        public static void CmsFloat2LabEncoded(ushort[] wLab, global::LittleCmsNet.CmsCIELab Lab)
         {
             if (wLab == null || wLab.Length != 3)
                 throw new ArgumentOutOfRangeException("wLab", "The dimensions of the provided array don't match the required size.");
@@ -5931,7 +5931,7 @@ namespace LitteCmsNet
             __Internal.CmsFloat2LabEncoded(wLab, __arg1);
         }
 
-        public static void CmsFloat2LabEncodedV2(ushort[] wLab, global::LitteCmsNet.CmsCIELab Lab)
+        public static void CmsFloat2LabEncodedV2(ushort[] wLab, global::LittleCmsNet.CmsCIELab Lab)
         {
             if (wLab == null || wLab.Length != 3)
                 throw new ArgumentOutOfRangeException("wLab", "The dimensions of the provided array don't match the required size.");
@@ -5939,7 +5939,7 @@ namespace LitteCmsNet
             __Internal.CmsFloat2LabEncodedV2(wLab, __arg1);
         }
 
-        public static void CmsXYZEncoded2Float(global::LitteCmsNet.CmsCIEXYZ fxyz, ushort[] XYZ)
+        public static void CmsXYZEncoded2Float(global::LittleCmsNet.CmsCIEXYZ fxyz, ushort[] XYZ)
         {
             var __arg0 = ReferenceEquals(fxyz, null) ? global::System.IntPtr.Zero : fxyz.__Instance;
             if (XYZ == null || XYZ.Length != 3)
@@ -5947,7 +5947,7 @@ namespace LitteCmsNet
             __Internal.CmsXYZEncoded2Float(__arg0, XYZ);
         }
 
-        public static void CmsFloat2XYZEncoded(ushort[] XYZ, global::LitteCmsNet.CmsCIEXYZ fXYZ)
+        public static void CmsFloat2XYZEncoded(ushort[] XYZ, global::LittleCmsNet.CmsCIEXYZ fXYZ)
         {
             if (XYZ == null || XYZ.Length != 3)
                 throw new ArgumentOutOfRangeException("XYZ", "The dimensions of the provided array don't match the required size.");
@@ -5955,7 +5955,7 @@ namespace LitteCmsNet
             __Internal.CmsFloat2XYZEncoded(XYZ, __arg1);
         }
 
-        public static double CmsDeltaE(global::LitteCmsNet.CmsCIELab Lab1, global::LitteCmsNet.CmsCIELab Lab2)
+        public static double CmsDeltaE(global::LittleCmsNet.CmsCIELab Lab1, global::LittleCmsNet.CmsCIELab Lab2)
         {
             var __arg0 = ReferenceEquals(Lab1, null) ? global::System.IntPtr.Zero : Lab1.__Instance;
             var __arg1 = ReferenceEquals(Lab2, null) ? global::System.IntPtr.Zero : Lab2.__Instance;
@@ -5963,7 +5963,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static double CmsCIE94DeltaE(global::LitteCmsNet.CmsCIELab Lab1, global::LitteCmsNet.CmsCIELab Lab2)
+        public static double CmsCIE94DeltaE(global::LittleCmsNet.CmsCIELab Lab1, global::LittleCmsNet.CmsCIELab Lab2)
         {
             var __arg0 = ReferenceEquals(Lab1, null) ? global::System.IntPtr.Zero : Lab1.__Instance;
             var __arg1 = ReferenceEquals(Lab2, null) ? global::System.IntPtr.Zero : Lab2.__Instance;
@@ -5971,7 +5971,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static double CmsBFDdeltaE(global::LitteCmsNet.CmsCIELab Lab1, global::LitteCmsNet.CmsCIELab Lab2)
+        public static double CmsBFDdeltaE(global::LittleCmsNet.CmsCIELab Lab1, global::LittleCmsNet.CmsCIELab Lab2)
         {
             var __arg0 = ReferenceEquals(Lab1, null) ? global::System.IntPtr.Zero : Lab1.__Instance;
             var __arg1 = ReferenceEquals(Lab2, null) ? global::System.IntPtr.Zero : Lab2.__Instance;
@@ -5979,7 +5979,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static double CmsCMCdeltaE(global::LitteCmsNet.CmsCIELab Lab1, global::LitteCmsNet.CmsCIELab Lab2, double l, double c)
+        public static double CmsCMCdeltaE(global::LittleCmsNet.CmsCIELab Lab1, global::LittleCmsNet.CmsCIELab Lab2, double l, double c)
         {
             var __arg0 = ReferenceEquals(Lab1, null) ? global::System.IntPtr.Zero : Lab1.__Instance;
             var __arg1 = ReferenceEquals(Lab2, null) ? global::System.IntPtr.Zero : Lab2.__Instance;
@@ -5987,7 +5987,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static double CmsCIE2000DeltaE(global::LitteCmsNet.CmsCIELab Lab1, global::LitteCmsNet.CmsCIELab Lab2, double Kl, double Kc, double Kh)
+        public static double CmsCIE2000DeltaE(global::LittleCmsNet.CmsCIELab Lab1, global::LittleCmsNet.CmsCIELab Lab2, double Kl, double Kc, double Kh)
         {
             var __arg0 = ReferenceEquals(Lab1, null) ? global::System.IntPtr.Zero : Lab1.__Instance;
             var __arg1 = ReferenceEquals(Lab2, null) ? global::System.IntPtr.Zero : Lab2.__Instance;
@@ -5995,14 +5995,14 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsWhitePointFromTemp(global::LitteCmsNet.CmsCIExyY WhitePoint, double TempK)
+        public static int CmsWhitePointFromTemp(global::LittleCmsNet.CmsCIExyY WhitePoint, double TempK)
         {
             var __arg0 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
             var __ret = __Internal.CmsWhitePointFromTemp(__arg0, TempK);
             return __ret;
         }
 
-        public static int CmsTempFromWhitePoint(ref double TempK, global::LitteCmsNet.CmsCIExyY WhitePoint)
+        public static int CmsTempFromWhitePoint(ref double TempK, global::LittleCmsNet.CmsCIExyY WhitePoint)
         {
             fixed (double* __TempK0 = &TempK)
             {
@@ -6013,7 +6013,7 @@ namespace LitteCmsNet
             }
         }
 
-        public static int CmsAdaptToIlluminant(global::LitteCmsNet.CmsCIEXYZ Result, global::LitteCmsNet.CmsCIEXYZ SourceWhitePt, global::LitteCmsNet.CmsCIEXYZ Illuminant, global::LitteCmsNet.CmsCIEXYZ Value)
+        public static int CmsAdaptToIlluminant(global::LittleCmsNet.CmsCIEXYZ Result, global::LittleCmsNet.CmsCIEXYZ SourceWhitePt, global::LittleCmsNet.CmsCIEXYZ Illuminant, global::LittleCmsNet.CmsCIEXYZ Value)
         {
             var __arg0 = ReferenceEquals(Result, null) ? global::System.IntPtr.Zero : Result.__Instance;
             var __arg1 = ReferenceEquals(SourceWhitePt, null) ? global::System.IntPtr.Zero : SourceWhitePt.__Instance;
@@ -6023,7 +6023,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCIECAM02Init(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsViewingConditions pVC)
+        public static global::System.IntPtr CmsCIECAM02Init(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsViewingConditions pVC)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(pVC, null) ? global::System.IntPtr.Zero : pVC.__Instance;
@@ -6036,100 +6036,100 @@ namespace LitteCmsNet
             __Internal.CmsCIECAM02Done(hModel);
         }
 
-        public static void CmsCIECAM02Forward(global::System.IntPtr hModel, global::LitteCmsNet.CmsCIEXYZ pIn, global::LitteCmsNet.CmsJCh pOut)
+        public static void CmsCIECAM02Forward(global::System.IntPtr hModel, global::LittleCmsNet.CmsCIEXYZ pIn, global::LittleCmsNet.CmsJCh pOut)
         {
             var __arg1 = ReferenceEquals(pIn, null) ? global::System.IntPtr.Zero : pIn.__Instance;
             var __arg2 = ReferenceEquals(pOut, null) ? global::System.IntPtr.Zero : pOut.__Instance;
             __Internal.CmsCIECAM02Forward(hModel, __arg1, __arg2);
         }
 
-        public static void CmsCIECAM02Reverse(global::System.IntPtr hModel, global::LitteCmsNet.CmsJCh pIn, global::LitteCmsNet.CmsCIEXYZ pOut)
+        public static void CmsCIECAM02Reverse(global::System.IntPtr hModel, global::LittleCmsNet.CmsJCh pIn, global::LittleCmsNet.CmsCIEXYZ pOut)
         {
             var __arg1 = ReferenceEquals(pIn, null) ? global::System.IntPtr.Zero : pIn.__Instance;
             var __arg2 = ReferenceEquals(pOut, null) ? global::System.IntPtr.Zero : pOut.__Instance;
             __Internal.CmsCIECAM02Reverse(hModel, __arg1, __arg2);
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsBuildSegmentedToneCurve(global::LitteCmsNet.CmsContextStruct ContextID, uint nSegments, global::LitteCmsNet.CmsCurveSegment[] Segments)
+        public static global::LittleCmsNet.CmsCurveStruct CmsBuildSegmentedToneCurve(global::LittleCmsNet.CmsContextStruct ContextID, uint nSegments, global::LittleCmsNet.CmsCurveSegment[] Segments)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
-            global::LitteCmsNet.CmsCurveSegment.__Internal[] __Segments;
+            global::LittleCmsNet.CmsCurveSegment.__Internal[] __Segments;
             if (ReferenceEquals(Segments, null))
                 __Segments = null;
             else
             {
-                __Segments = new global::LitteCmsNet.CmsCurveSegment.__Internal[Segments.Length];
+                __Segments = new global::LittleCmsNet.CmsCurveSegment.__Internal[Segments.Length];
                 for (int i = 0; i < __Segments.Length; i++)
                 {
                     var __element = Segments[i];
-                    __Segments[i] = ReferenceEquals(__element, null) ? new global::LitteCmsNet.CmsCurveSegment.__Internal() : *(global::LitteCmsNet.CmsCurveSegment.__Internal*) __element.__Instance;
+                    __Segments[i] = ReferenceEquals(__element, null) ? new global::LittleCmsNet.CmsCurveSegment.__Internal() : *(global::LittleCmsNet.CmsCurveSegment.__Internal*) __element.__Instance;
                 }
             }
             var __arg2 = __Segments;
             var __ret = __Internal.CmsBuildSegmentedToneCurve(__arg0, nSegments, __arg2);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsBuildParametricToneCurve(global::LitteCmsNet.CmsContextStruct ContextID, int Type, double[] Params)
+        public static global::LittleCmsNet.CmsCurveStruct CmsBuildParametricToneCurve(global::LittleCmsNet.CmsContextStruct ContextID, int Type, double[] Params)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsBuildParametricToneCurve(__arg0, Type, Params);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsBuildGamma(global::LitteCmsNet.CmsContextStruct ContextID, double Gamma)
+        public static global::LittleCmsNet.CmsCurveStruct CmsBuildGamma(global::LittleCmsNet.CmsContextStruct ContextID, double Gamma)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsBuildGamma(__arg0, Gamma);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsBuildTabulatedToneCurve16(global::LitteCmsNet.CmsContextStruct ContextID, uint nEntries, ushort[] values)
+        public static global::LittleCmsNet.CmsCurveStruct CmsBuildTabulatedToneCurve16(global::LittleCmsNet.CmsContextStruct ContextID, uint nEntries, ushort[] values)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsBuildTabulatedToneCurve16(__arg0, nEntries, values);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsBuildTabulatedToneCurveFloat(global::LitteCmsNet.CmsContextStruct ContextID, uint nEntries, float[] values)
+        public static global::LittleCmsNet.CmsCurveStruct CmsBuildTabulatedToneCurveFloat(global::LittleCmsNet.CmsContextStruct ContextID, uint nEntries, float[] values)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsBuildTabulatedToneCurveFloat(__arg0, nEntries, values);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsFreeToneCurve(global::LitteCmsNet.CmsCurveStruct Curve)
+        public static void CmsFreeToneCurve(global::LittleCmsNet.CmsCurveStruct Curve)
         {
             var __arg0 = ReferenceEquals(Curve, null) ? global::System.IntPtr.Zero : Curve.__Instance;
             __Internal.CmsFreeToneCurve(__arg0);
         }
 
-        public static void CmsFreeToneCurveTriple(global::LitteCmsNet.CmsCurveStruct[] Curve)
+        public static void CmsFreeToneCurveTriple(global::LittleCmsNet.CmsCurveStruct[] Curve)
         {
             if (Curve == null || Curve.Length != 3)
                 throw new ArgumentOutOfRangeException("Curve", "The dimensions of the provided array don't match the required size.");
@@ -6149,240 +6149,240 @@ namespace LitteCmsNet
             __Internal.CmsFreeToneCurveTriple(__arg0);
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsDupToneCurve(global::LitteCmsNet.CmsCurveStruct Src)
+        public static global::LittleCmsNet.CmsCurveStruct CmsDupToneCurve(global::LittleCmsNet.CmsCurveStruct Src)
         {
             var __arg0 = ReferenceEquals(Src, null) ? global::System.IntPtr.Zero : Src.__Instance;
             var __ret = __Internal.CmsDupToneCurve(__arg0);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsReverseToneCurve(global::LitteCmsNet.CmsCurveStruct InGamma)
+        public static global::LittleCmsNet.CmsCurveStruct CmsReverseToneCurve(global::LittleCmsNet.CmsCurveStruct InGamma)
         {
             var __arg0 = ReferenceEquals(InGamma, null) ? global::System.IntPtr.Zero : InGamma.__Instance;
             var __ret = __Internal.CmsReverseToneCurve(__arg0);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsReverseToneCurveEx(uint nResultSamples, global::LitteCmsNet.CmsCurveStruct InGamma)
+        public static global::LittleCmsNet.CmsCurveStruct CmsReverseToneCurveEx(uint nResultSamples, global::LittleCmsNet.CmsCurveStruct InGamma)
         {
             var __arg1 = ReferenceEquals(InGamma, null) ? global::System.IntPtr.Zero : InGamma.__Instance;
             var __ret = __Internal.CmsReverseToneCurveEx(nResultSamples, __arg1);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsCurveStruct CmsJoinToneCurve(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsCurveStruct X, global::LitteCmsNet.CmsCurveStruct Y, uint nPoints)
+        public static global::LittleCmsNet.CmsCurveStruct CmsJoinToneCurve(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsCurveStruct X, global::LittleCmsNet.CmsCurveStruct Y, uint nPoints)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(X, null) ? global::System.IntPtr.Zero : X.__Instance;
             var __arg2 = ReferenceEquals(Y, null) ? global::System.IntPtr.Zero : Y.__Instance;
             var __ret = __Internal.CmsJoinToneCurve(__arg0, __arg1, __arg2, nPoints);
-            global::LitteCmsNet.CmsCurveStruct __result0;
+            global::LittleCmsNet.CmsCurveStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsCurveStruct) global::LitteCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsCurveStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsCurveStruct) global::LittleCmsNet.CmsCurveStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsCurveStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static int CmsSmoothToneCurve(global::LitteCmsNet.CmsCurveStruct Tab, double lambda)
+        public static int CmsSmoothToneCurve(global::LittleCmsNet.CmsCurveStruct Tab, double lambda)
         {
             var __arg0 = ReferenceEquals(Tab, null) ? global::System.IntPtr.Zero : Tab.__Instance;
             var __ret = __Internal.CmsSmoothToneCurve(__arg0, lambda);
             return __ret;
         }
 
-        public static float CmsEvalToneCurveFloat(global::LitteCmsNet.CmsCurveStruct Curve, float v)
+        public static float CmsEvalToneCurveFloat(global::LittleCmsNet.CmsCurveStruct Curve, float v)
         {
             var __arg0 = ReferenceEquals(Curve, null) ? global::System.IntPtr.Zero : Curve.__Instance;
             var __ret = __Internal.CmsEvalToneCurveFloat(__arg0, v);
             return __ret;
         }
 
-        public static ushort CmsEvalToneCurve16(global::LitteCmsNet.CmsCurveStruct Curve, ushort v)
+        public static ushort CmsEvalToneCurve16(global::LittleCmsNet.CmsCurveStruct Curve, ushort v)
         {
             var __arg0 = ReferenceEquals(Curve, null) ? global::System.IntPtr.Zero : Curve.__Instance;
             var __ret = __Internal.CmsEvalToneCurve16(__arg0, v);
             return __ret;
         }
 
-        public static int CmsIsToneCurveMultisegment(global::LitteCmsNet.CmsCurveStruct InGamma)
+        public static int CmsIsToneCurveMultisegment(global::LittleCmsNet.CmsCurveStruct InGamma)
         {
             var __arg0 = ReferenceEquals(InGamma, null) ? global::System.IntPtr.Zero : InGamma.__Instance;
             var __ret = __Internal.CmsIsToneCurveMultisegment(__arg0);
             return __ret;
         }
 
-        public static int CmsIsToneCurveLinear(global::LitteCmsNet.CmsCurveStruct Curve)
+        public static int CmsIsToneCurveLinear(global::LittleCmsNet.CmsCurveStruct Curve)
         {
             var __arg0 = ReferenceEquals(Curve, null) ? global::System.IntPtr.Zero : Curve.__Instance;
             var __ret = __Internal.CmsIsToneCurveLinear(__arg0);
             return __ret;
         }
 
-        public static int CmsIsToneCurveMonotonic(global::LitteCmsNet.CmsCurveStruct t)
+        public static int CmsIsToneCurveMonotonic(global::LittleCmsNet.CmsCurveStruct t)
         {
             var __arg0 = ReferenceEquals(t, null) ? global::System.IntPtr.Zero : t.__Instance;
             var __ret = __Internal.CmsIsToneCurveMonotonic(__arg0);
             return __ret;
         }
 
-        public static int CmsIsToneCurveDescending(global::LitteCmsNet.CmsCurveStruct t)
+        public static int CmsIsToneCurveDescending(global::LittleCmsNet.CmsCurveStruct t)
         {
             var __arg0 = ReferenceEquals(t, null) ? global::System.IntPtr.Zero : t.__Instance;
             var __ret = __Internal.CmsIsToneCurveDescending(__arg0);
             return __ret;
         }
 
-        public static int CmsGetToneCurveParametricType(global::LitteCmsNet.CmsCurveStruct t)
+        public static int CmsGetToneCurveParametricType(global::LittleCmsNet.CmsCurveStruct t)
         {
             var __arg0 = ReferenceEquals(t, null) ? global::System.IntPtr.Zero : t.__Instance;
             var __ret = __Internal.CmsGetToneCurveParametricType(__arg0);
             return __ret;
         }
 
-        public static double CmsEstimateGamma(global::LitteCmsNet.CmsCurveStruct t, double Precision)
+        public static double CmsEstimateGamma(global::LittleCmsNet.CmsCurveStruct t, double Precision)
         {
             var __arg0 = ReferenceEquals(t, null) ? global::System.IntPtr.Zero : t.__Instance;
             var __ret = __Internal.CmsEstimateGamma(__arg0, Precision);
             return __ret;
         }
 
-        public static uint CmsGetToneCurveEstimatedTableEntries(global::LitteCmsNet.CmsCurveStruct t)
+        public static uint CmsGetToneCurveEstimatedTableEntries(global::LittleCmsNet.CmsCurveStruct t)
         {
             var __arg0 = ReferenceEquals(t, null) ? global::System.IntPtr.Zero : t.__Instance;
             var __ret = __Internal.CmsGetToneCurveEstimatedTableEntries(__arg0);
             return __ret;
         }
 
-        public static ushort* CmsGetToneCurveEstimatedTable(global::LitteCmsNet.CmsCurveStruct t)
+        public static ushort* CmsGetToneCurveEstimatedTable(global::LittleCmsNet.CmsCurveStruct t)
         {
             var __arg0 = ReferenceEquals(t, null) ? global::System.IntPtr.Zero : t.__Instance;
             var __ret = __Internal.CmsGetToneCurveEstimatedTable(__arg0);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsPipelineStruct CmsPipelineAlloc(global::LitteCmsNet.CmsContextStruct ContextID, uint InputChannels, uint OutputChannels)
+        public static global::LittleCmsNet.CmsPipelineStruct CmsPipelineAlloc(global::LittleCmsNet.CmsContextStruct ContextID, uint InputChannels, uint OutputChannels)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsPipelineAlloc(__arg0, InputChannels, OutputChannels);
-            global::LitteCmsNet.CmsPipelineStruct __result0;
+            global::LittleCmsNet.CmsPipelineStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsPipelineStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsPipelineStruct) global::LitteCmsNet.CmsPipelineStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsPipelineStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsPipelineStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsPipelineStruct) global::LittleCmsNet.CmsPipelineStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsPipelineStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsPipelineFree(global::LitteCmsNet.CmsPipelineStruct lut)
+        public static void CmsPipelineFree(global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             __Internal.CmsPipelineFree(__arg0);
         }
 
-        public static global::LitteCmsNet.CmsPipelineStruct CmsPipelineDup(global::LitteCmsNet.CmsPipelineStruct Orig)
+        public static global::LittleCmsNet.CmsPipelineStruct CmsPipelineDup(global::LittleCmsNet.CmsPipelineStruct Orig)
         {
             var __arg0 = ReferenceEquals(Orig, null) ? global::System.IntPtr.Zero : Orig.__Instance;
             var __ret = __Internal.CmsPipelineDup(__arg0);
-            global::LitteCmsNet.CmsPipelineStruct __result0;
+            global::LittleCmsNet.CmsPipelineStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsPipelineStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsPipelineStruct) global::LitteCmsNet.CmsPipelineStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsPipelineStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsPipelineStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsPipelineStruct) global::LittleCmsNet.CmsPipelineStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsPipelineStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsContextStruct CmsGetPipelineContextID(global::LitteCmsNet.CmsPipelineStruct lut)
+        public static global::LittleCmsNet.CmsContextStruct CmsGetPipelineContextID(global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsGetPipelineContextID(__arg0);
-            global::LitteCmsNet.CmsContextStruct __result0;
+            global::LittleCmsNet.CmsContextStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsContextStruct) global::LitteCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsContextStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsContextStruct) global::LittleCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsContextStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static uint CmsPipelineInputChannels(global::LitteCmsNet.CmsPipelineStruct lut)
+        public static uint CmsPipelineInputChannels(global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsPipelineInputChannels(__arg0);
             return __ret;
         }
 
-        public static uint CmsPipelineOutputChannels(global::LitteCmsNet.CmsPipelineStruct lut)
+        public static uint CmsPipelineOutputChannels(global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsPipelineOutputChannels(__arg0);
             return __ret;
         }
 
-        public static uint CmsPipelineStageCount(global::LitteCmsNet.CmsPipelineStruct lut)
+        public static uint CmsPipelineStageCount(global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsPipelineStageCount(__arg0);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsPipelineGetPtrToFirstStage(global::LitteCmsNet.CmsPipelineStruct lut)
+        public static global::LittleCmsNet.CmsStageStruct CmsPipelineGetPtrToFirstStage(global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsPipelineGetPtrToFirstStage(__arg0);
-            global::LitteCmsNet.CmsStageStruct __result0;
+            global::LittleCmsNet.CmsStageStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsPipelineGetPtrToLastStage(global::LitteCmsNet.CmsPipelineStruct lut)
+        public static global::LittleCmsNet.CmsStageStruct CmsPipelineGetPtrToLastStage(global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsPipelineGetPtrToLastStage(__arg0);
-            global::LitteCmsNet.CmsStageStruct __result0;
+            global::LittleCmsNet.CmsStageStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsPipelineEval16(ushort[] In, ushort[] Out, global::LitteCmsNet.CmsPipelineStruct lut)
+        public static void CmsPipelineEval16(ushort[] In, ushort[] Out, global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg2 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             __Internal.CmsPipelineEval16(In, Out, __arg2);
         }
 
-        public static void CmsPipelineEvalFloat(float[] In, float[] Out, global::LitteCmsNet.CmsPipelineStruct lut)
+        public static void CmsPipelineEvalFloat(float[] In, float[] Out, global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg2 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             __Internal.CmsPipelineEvalFloat(In, Out, __arg2);
         }
 
-        public static int CmsPipelineEvalReverseFloat(float[] Target, float[] Result, float[] Hint, global::LitteCmsNet.CmsPipelineStruct lut)
+        public static int CmsPipelineEvalReverseFloat(float[] Target, float[] Result, float[] Hint, global::LittleCmsNet.CmsPipelineStruct lut)
         {
             var __arg3 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsPipelineEvalReverseFloat(Target, Result, Hint, __arg3);
             return __ret;
         }
 
-        public static int CmsPipelineCat(global::LitteCmsNet.CmsPipelineStruct l1, global::LitteCmsNet.CmsPipelineStruct l2)
+        public static int CmsPipelineCat(global::LittleCmsNet.CmsPipelineStruct l1, global::LittleCmsNet.CmsPipelineStruct l2)
         {
             var __arg0 = ReferenceEquals(l1, null) ? global::System.IntPtr.Zero : l1.__Instance;
             var __arg1 = ReferenceEquals(l2, null) ? global::System.IntPtr.Zero : l2.__Instance;
@@ -6390,14 +6390,14 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsPipelineSetSaveAs8bitsFlag(global::LitteCmsNet.CmsPipelineStruct lut, int On)
+        public static int CmsPipelineSetSaveAs8bitsFlag(global::LittleCmsNet.CmsPipelineStruct lut, int On)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __ret = __Internal.CmsPipelineSetSaveAs8bitsFlag(__arg0, On);
             return __ret;
         }
 
-        public static int CmsPipelineInsertStage(global::LitteCmsNet.CmsPipelineStruct lut, global::LitteCmsNet.CmsStageLoc loc, global::LitteCmsNet.CmsStageStruct mpe)
+        public static int CmsPipelineInsertStage(global::LittleCmsNet.CmsPipelineStruct lut, global::LittleCmsNet.CmsStageLoc loc, global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var __arg2 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
@@ -6405,7 +6405,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static void CmsPipelineUnlinkStage(global::LitteCmsNet.CmsPipelineStruct lut, global::LitteCmsNet.CmsStageLoc loc, global::LitteCmsNet.CmsStageStruct mpe)
+        public static void CmsPipelineUnlinkStage(global::LittleCmsNet.CmsPipelineStruct lut, global::LittleCmsNet.CmsStageLoc loc, global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
             var ____arg2 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
@@ -6413,26 +6413,26 @@ namespace LitteCmsNet
             __Internal.CmsPipelineUnlinkStage(__arg0, loc, __arg2);
         }
 
-        public static int CmsPipelineCheckAndRetreiveStages(global::LitteCmsNet.CmsPipelineStruct Lut, uint n)
+        public static int CmsPipelineCheckAndRetreiveStages(global::LittleCmsNet.CmsPipelineStruct Lut, uint n)
         {
             var __arg0 = ReferenceEquals(Lut, null) ? global::System.IntPtr.Zero : Lut.__Instance;
             var __ret = __Internal.CmsPipelineCheckAndRetreiveStages(__arg0, n);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageAllocIdentity(global::LitteCmsNet.CmsContextStruct ContextID, uint nChannels)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageAllocIdentity(global::LittleCmsNet.CmsContextStruct ContextID, uint nChannels)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsStageAllocIdentity(__arg0, nChannels);
-            global::LitteCmsNet.CmsStageStruct __result0;
+            global::LittleCmsNet.CmsStageStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageAllocToneCurves(global::LitteCmsNet.CmsContextStruct ContextID, uint nChannels, global::LitteCmsNet.CmsCurveStruct[] Curves)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageAllocToneCurves(global::LittleCmsNet.CmsContextStruct ContextID, uint nChannels, global::LittleCmsNet.CmsCurveStruct[] Curves)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             global::System.IntPtr[] __Curves;
@@ -6449,15 +6449,15 @@ namespace LitteCmsNet
             }
             var __arg2 = __Curves;
             var __ret = __Internal.CmsStageAllocToneCurves(__arg0, nChannels, __arg2);
-            global::LitteCmsNet.CmsStageStruct __result0;
+            global::LittleCmsNet.CmsStageStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageAllocMatrix(global::LitteCmsNet.CmsContextStruct ContextID, uint Rows, uint Cols, ref double Matrix, ref double Offset)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageAllocMatrix(global::LittleCmsNet.CmsContextStruct ContextID, uint Rows, uint Cols, ref double Matrix, ref double Offset)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             fixed (double* __Matrix3 = &Matrix)
@@ -6467,139 +6467,139 @@ namespace LitteCmsNet
                 {
                     var __arg4 = __Offset4;
                     var __ret = __Internal.CmsStageAllocMatrix(__arg0, Rows, Cols, __arg3, __arg4);
-                    global::LitteCmsNet.CmsStageStruct __result0;
+                    global::LittleCmsNet.CmsStageStruct __result0;
                     if (__ret == IntPtr.Zero) __result0 = null;
-                    else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                        __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-                    else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+                    else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                        __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+                    else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
                     return __result0;
                 }
             }
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageAllocCLut16bit(global::LitteCmsNet.CmsContextStruct ContextID, uint nGridPoints, uint inputChan, uint outputChan, ref ushort Table)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageAllocCLut16bit(global::LittleCmsNet.CmsContextStruct ContextID, uint nGridPoints, uint inputChan, uint outputChan, ref ushort Table)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             fixed (ushort* __Table4 = &Table)
             {
                 var __arg4 = __Table4;
                 var __ret = __Internal.CmsStageAllocCLut16bit(__arg0, nGridPoints, inputChan, outputChan, __arg4);
-                global::LitteCmsNet.CmsStageStruct __result0;
+                global::LittleCmsNet.CmsStageStruct __result0;
                 if (__ret == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                    __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-                else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+                else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                    __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+                else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
                 return __result0;
             }
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageAllocCLutFloat(global::LitteCmsNet.CmsContextStruct ContextID, uint nGridPoints, uint inputChan, uint outputChan, ref float Table)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageAllocCLutFloat(global::LittleCmsNet.CmsContextStruct ContextID, uint nGridPoints, uint inputChan, uint outputChan, ref float Table)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             fixed (float* __Table4 = &Table)
             {
                 var __arg4 = __Table4;
                 var __ret = __Internal.CmsStageAllocCLutFloat(__arg0, nGridPoints, inputChan, outputChan, __arg4);
-                global::LitteCmsNet.CmsStageStruct __result0;
+                global::LittleCmsNet.CmsStageStruct __result0;
                 if (__ret == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                    __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-                else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+                else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                    __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+                else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
                 return __result0;
             }
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageAllocCLut16bitGranular(global::LitteCmsNet.CmsContextStruct ContextID, uint[] clutPoints, uint inputChan, uint outputChan, ref ushort Table)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageAllocCLut16bitGranular(global::LittleCmsNet.CmsContextStruct ContextID, uint[] clutPoints, uint inputChan, uint outputChan, ref ushort Table)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             fixed (ushort* __Table4 = &Table)
             {
                 var __arg4 = __Table4;
                 var __ret = __Internal.CmsStageAllocCLut16bitGranular(__arg0, clutPoints, inputChan, outputChan, __arg4);
-                global::LitteCmsNet.CmsStageStruct __result0;
+                global::LittleCmsNet.CmsStageStruct __result0;
                 if (__ret == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                    __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-                else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+                else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                    __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+                else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
                 return __result0;
             }
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageAllocCLutFloatGranular(global::LitteCmsNet.CmsContextStruct ContextID, uint[] clutPoints, uint inputChan, uint outputChan, ref float Table)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageAllocCLutFloatGranular(global::LittleCmsNet.CmsContextStruct ContextID, uint[] clutPoints, uint inputChan, uint outputChan, ref float Table)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             fixed (float* __Table4 = &Table)
             {
                 var __arg4 = __Table4;
                 var __ret = __Internal.CmsStageAllocCLutFloatGranular(__arg0, clutPoints, inputChan, outputChan, __arg4);
-                global::LitteCmsNet.CmsStageStruct __result0;
+                global::LittleCmsNet.CmsStageStruct __result0;
                 if (__ret == IntPtr.Zero) __result0 = null;
-                else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                    __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-                else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+                else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                    __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+                else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
                 return __result0;
             }
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageDup(global::LitteCmsNet.CmsStageStruct mpe)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageDup(global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __ret = __Internal.CmsStageDup(__arg0);
-            global::LitteCmsNet.CmsStageStruct __result0;
+            global::LittleCmsNet.CmsStageStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsStageFree(global::LitteCmsNet.CmsStageStruct mpe)
+        public static void CmsStageFree(global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             __Internal.CmsStageFree(__arg0);
         }
 
-        public static global::LitteCmsNet.CmsStageStruct CmsStageNext(global::LitteCmsNet.CmsStageStruct mpe)
+        public static global::LittleCmsNet.CmsStageStruct CmsStageNext(global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __ret = __Internal.CmsStageNext(__arg0);
-            global::LitteCmsNet.CmsStageStruct __result0;
+            global::LittleCmsNet.CmsStageStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsStageStruct) global::LitteCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsStageStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsStageStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsStageStruct) global::LittleCmsNet.CmsStageStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsStageStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static uint CmsStageInputChannels(global::LitteCmsNet.CmsStageStruct mpe)
+        public static uint CmsStageInputChannels(global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __ret = __Internal.CmsStageInputChannels(__arg0);
             return __ret;
         }
 
-        public static uint CmsStageOutputChannels(global::LitteCmsNet.CmsStageStruct mpe)
+        public static uint CmsStageOutputChannels(global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __ret = __Internal.CmsStageOutputChannels(__arg0);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsStageSignature CmsStageType(global::LitteCmsNet.CmsStageStruct mpe)
+        public static global::LittleCmsNet.CmsStageSignature CmsStageType(global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __ret = __Internal.CmsStageType(__arg0);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsStageData(global::LitteCmsNet.CmsStageStruct mpe)
+        public static global::System.IntPtr CmsStageData(global::LittleCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __ret = __Internal.CmsStageData(__arg0);
             return __ret;
         }
 
-        public static int CmsStageSampleCLut16bit(global::LitteCmsNet.CmsStageStruct mpe, global::LitteCmsNet.CmsSAMPLER16 Sampler, global::System.IntPtr Cargo, uint dwFlags)
+        public static int CmsStageSampleCLut16bit(global::LittleCmsNet.CmsStageStruct mpe, global::LittleCmsNet.CmsSAMPLER16 Sampler, global::System.IntPtr Cargo, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __arg1 = Sampler == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(Sampler);
@@ -6607,7 +6607,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsStageSampleCLutFloat(global::LitteCmsNet.CmsStageStruct mpe, global::LitteCmsNet.CmsSAMPLERFLOAT Sampler, global::System.IntPtr Cargo, uint dwFlags)
+        public static int CmsStageSampleCLutFloat(global::LittleCmsNet.CmsStageStruct mpe, global::LittleCmsNet.CmsSAMPLERFLOAT Sampler, global::System.IntPtr Cargo, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
             var __arg1 = Sampler == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(Sampler);
@@ -6615,51 +6615,51 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsSliceSpace16(uint nInputs, uint[] clutPoints, global::LitteCmsNet.CmsSAMPLER16 Sampler, global::System.IntPtr Cargo)
+        public static int CmsSliceSpace16(uint nInputs, uint[] clutPoints, global::LittleCmsNet.CmsSAMPLER16 Sampler, global::System.IntPtr Cargo)
         {
             var __arg2 = Sampler == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(Sampler);
             var __ret = __Internal.CmsSliceSpace16(nInputs, clutPoints, __arg2, Cargo);
             return __ret;
         }
 
-        public static int CmsSliceSpaceFloat(uint nInputs, uint[] clutPoints, global::LitteCmsNet.CmsSAMPLERFLOAT Sampler, global::System.IntPtr Cargo)
+        public static int CmsSliceSpaceFloat(uint nInputs, uint[] clutPoints, global::LittleCmsNet.CmsSAMPLERFLOAT Sampler, global::System.IntPtr Cargo)
         {
             var __arg2 = Sampler == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(Sampler);
             var __ret = __Internal.CmsSliceSpaceFloat(nInputs, clutPoints, __arg2, Cargo);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsMLU_struct CmsMLUalloc(global::LitteCmsNet.CmsContextStruct ContextID, uint nItems)
+        public static global::LittleCmsNet.CmsMLU_struct CmsMLUalloc(global::LittleCmsNet.CmsContextStruct ContextID, uint nItems)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsMLUalloc(__arg0, nItems);
-            global::LitteCmsNet.CmsMLU_struct __result0;
+            global::LittleCmsNet.CmsMLU_struct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsMLUfree(global::LitteCmsNet.CmsMLU_struct mlu)
+        public static void CmsMLUfree(global::LittleCmsNet.CmsMLU_struct mlu)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             __Internal.CmsMLUfree(__arg0);
         }
 
-        public static global::LitteCmsNet.CmsMLU_struct CmsMLUdup(global::LitteCmsNet.CmsMLU_struct mlu)
+        public static global::LittleCmsNet.CmsMLU_struct CmsMLUdup(global::LittleCmsNet.CmsMLU_struct mlu)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             var __ret = __Internal.CmsMLUdup(__arg0);
-            global::LitteCmsNet.CmsMLU_struct __result0;
+            global::LittleCmsNet.CmsMLU_struct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsMLU_struct) global::LitteCmsNet.CmsMLU_struct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsMLU_struct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsMLU_struct) global::LittleCmsNet.CmsMLU_struct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsMLU_struct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static int CmsMLUsetASCII(global::LitteCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, string ASCIIString)
+        public static int CmsMLUsetASCII(global::LittleCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, string ASCIIString)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             if (LanguageCode == null || LanguageCode.Length != 3)
@@ -6670,7 +6670,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsMLUsetWide(global::LitteCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, string WideString)
+        public static int CmsMLUsetWide(global::LittleCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, string WideString)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             if (LanguageCode == null || LanguageCode.Length != 3)
@@ -6681,7 +6681,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsMLUgetASCII(global::LitteCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte* Buffer, uint BufferSize)
+        public static uint CmsMLUgetASCII(global::LittleCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte* Buffer, uint BufferSize)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             if (LanguageCode == null || LanguageCode.Length != 3)
@@ -6692,7 +6692,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsMLUgetWide(global::LitteCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, char* Buffer, uint BufferSize)
+        public static uint CmsMLUgetWide(global::LittleCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, char* Buffer, uint BufferSize)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             if (LanguageCode == null || LanguageCode.Length != 3)
@@ -6703,7 +6703,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsMLUgetTranslation(global::LitteCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte[] ObtainedLanguage, sbyte[] ObtainedCountry)
+        public static int CmsMLUgetTranslation(global::LittleCmsNet.CmsMLU_struct mlu, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte[] ObtainedLanguage, sbyte[] ObtainedCountry)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             if (LanguageCode == null || LanguageCode.Length != 3)
@@ -6718,14 +6718,14 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsMLUtranslationsCount(global::LitteCmsNet.CmsMLU_struct mlu)
+        public static uint CmsMLUtranslationsCount(global::LittleCmsNet.CmsMLU_struct mlu)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             var __ret = __Internal.CmsMLUtranslationsCount(__arg0);
             return __ret;
         }
 
-        public static int CmsMLUtranslationsCodes(global::LitteCmsNet.CmsMLU_struct mlu, uint idx, sbyte[] LanguageCode, sbyte[] CountryCode)
+        public static int CmsMLUtranslationsCodes(global::LittleCmsNet.CmsMLU_struct mlu, uint idx, sbyte[] LanguageCode, sbyte[] CountryCode)
         {
             var __arg0 = ReferenceEquals(mlu, null) ? global::System.IntPtr.Zero : mlu.__Instance;
             if (LanguageCode == null || LanguageCode.Length != 3)
@@ -6736,37 +6736,37 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsNAMEDCOLORLIST_struct CmsAllocNamedColorList(global::LitteCmsNet.CmsContextStruct ContextID, uint n, uint ColorantCount, string Prefix, string Suffix)
+        public static global::LittleCmsNet.CmsNAMEDCOLORLIST_struct CmsAllocNamedColorList(global::LittleCmsNet.CmsContextStruct ContextID, uint n, uint ColorantCount, string Prefix, string Suffix)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsAllocNamedColorList(__arg0, n, ColorantCount, Prefix, Suffix);
-            global::LitteCmsNet.CmsNAMEDCOLORLIST_struct __result0;
+            global::LittleCmsNet.CmsNAMEDCOLORLIST_struct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsNAMEDCOLORLIST_struct) global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsNAMEDCOLORLIST_struct) global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsFreeNamedColorList(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct v)
+        public static void CmsFreeNamedColorList(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct v)
         {
             var __arg0 = ReferenceEquals(v, null) ? global::System.IntPtr.Zero : v.__Instance;
             __Internal.CmsFreeNamedColorList(__arg0);
         }
 
-        public static global::LitteCmsNet.CmsNAMEDCOLORLIST_struct CmsDupNamedColorList(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct v)
+        public static global::LittleCmsNet.CmsNAMEDCOLORLIST_struct CmsDupNamedColorList(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct v)
         {
             var __arg0 = ReferenceEquals(v, null) ? global::System.IntPtr.Zero : v.__Instance;
             var __ret = __Internal.CmsDupNamedColorList(__arg0);
-            global::LitteCmsNet.CmsNAMEDCOLORLIST_struct __result0;
+            global::LittleCmsNet.CmsNAMEDCOLORLIST_struct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsNAMEDCOLORLIST_struct) global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsNAMEDCOLORLIST_struct) global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static int CmsAppendNamedColor(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct v, string Name, ushort[] PCS, ushort[] Colorant)
+        public static int CmsAppendNamedColor(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct v, string Name, ushort[] PCS, ushort[] Colorant)
         {
             var __arg0 = ReferenceEquals(v, null) ? global::System.IntPtr.Zero : v.__Instance;
             if (PCS == null || PCS.Length != 3)
@@ -6777,21 +6777,21 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsNamedColorCount(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct v)
+        public static uint CmsNamedColorCount(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct v)
         {
             var __arg0 = ReferenceEquals(v, null) ? global::System.IntPtr.Zero : v.__Instance;
             var __ret = __Internal.CmsNamedColorCount(__arg0);
             return __ret;
         }
 
-        public static int CmsNamedColorIndex(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct v, string Name)
+        public static int CmsNamedColorIndex(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct v, string Name)
         {
             var __arg0 = ReferenceEquals(v, null) ? global::System.IntPtr.Zero : v.__Instance;
             var __ret = __Internal.CmsNamedColorIndex(__arg0, Name);
             return __ret;
         }
 
-        public static int CmsNamedColorInfo(global::LitteCmsNet.CmsNAMEDCOLORLIST_struct NamedColorList, uint nColor, sbyte* Name, sbyte* Prefix, sbyte* Suffix, ref ushort PCS, ref ushort Colorant)
+        public static int CmsNamedColorInfo(global::LittleCmsNet.CmsNAMEDCOLORLIST_struct NamedColorList, uint nColor, sbyte* Name, sbyte* Prefix, sbyte* Suffix, ref ushort PCS, ref ushort Colorant)
         {
             var __arg0 = ReferenceEquals(NamedColorList, null) ? global::System.IntPtr.Zero : NamedColorList.__Instance;
             fixed (ushort* __PCS5 = &PCS)
@@ -6806,48 +6806,48 @@ namespace LitteCmsNet
             }
         }
 
-        public static global::LitteCmsNet.CmsNAMEDCOLORLIST_struct CmsGetNamedColorList(global::System.IntPtr xform)
+        public static global::LittleCmsNet.CmsNAMEDCOLORLIST_struct CmsGetNamedColorList(global::System.IntPtr xform)
         {
             var __ret = __Internal.CmsGetNamedColorList(xform);
-            global::LitteCmsNet.CmsNAMEDCOLORLIST_struct __result0;
+            global::LittleCmsNet.CmsNAMEDCOLORLIST_struct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsNAMEDCOLORLIST_struct) global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsNAMEDCOLORLIST_struct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsNAMEDCOLORLIST_struct) global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsNAMEDCOLORLIST_struct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsSEQ CmsAllocProfileSequenceDescription(global::LitteCmsNet.CmsContextStruct ContextID, uint n)
+        public static global::LittleCmsNet.CmsSEQ CmsAllocProfileSequenceDescription(global::LittleCmsNet.CmsContextStruct ContextID, uint n)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsAllocProfileSequenceDescription(__arg0, n);
-            global::LitteCmsNet.CmsSEQ __result0;
+            global::LittleCmsNet.CmsSEQ __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsSEQ.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsSEQ) global::LitteCmsNet.CmsSEQ.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsSEQ.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsSEQ.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsSEQ) global::LittleCmsNet.CmsSEQ.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsSEQ.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsSEQ CmsDupProfileSequenceDescription(global::LitteCmsNet.CmsSEQ pseq)
+        public static global::LittleCmsNet.CmsSEQ CmsDupProfileSequenceDescription(global::LittleCmsNet.CmsSEQ pseq)
         {
             var __arg0 = ReferenceEquals(pseq, null) ? global::System.IntPtr.Zero : pseq.__Instance;
             var __ret = __Internal.CmsDupProfileSequenceDescription(__arg0);
-            global::LitteCmsNet.CmsSEQ __result0;
+            global::LittleCmsNet.CmsSEQ __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsSEQ.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsSEQ) global::LitteCmsNet.CmsSEQ.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsSEQ.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsSEQ.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsSEQ) global::LittleCmsNet.CmsSEQ.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsSEQ.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static void CmsFreeProfileSequenceDescription(global::LitteCmsNet.CmsSEQ pseq)
+        public static void CmsFreeProfileSequenceDescription(global::LittleCmsNet.CmsSEQ pseq)
         {
             var __arg0 = ReferenceEquals(pseq, null) ? global::System.IntPtr.Zero : pseq.__Instance;
             __Internal.CmsFreeProfileSequenceDescription(__arg0);
         }
 
-        public static global::System.IntPtr CmsDictAlloc(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsDictAlloc(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsDictAlloc(__arg0);
@@ -6865,7 +6865,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsDictAddEntry(global::System.IntPtr hDict, string Name, string Value, global::LitteCmsNet.CmsMLU_struct DisplayName, global::LitteCmsNet.CmsMLU_struct DisplayValue)
+        public static int CmsDictAddEntry(global::System.IntPtr hDict, string Name, string Value, global::LittleCmsNet.CmsMLU_struct DisplayName, global::LittleCmsNet.CmsMLU_struct DisplayValue)
         {
             var __arg3 = ReferenceEquals(DisplayName, null) ? global::System.IntPtr.Zero : DisplayName.__Instance;
             var __arg4 = ReferenceEquals(DisplayValue, null) ? global::System.IntPtr.Zero : DisplayValue.__Instance;
@@ -6873,44 +6873,44 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsDICTentryStruct CmsDictGetEntryList(global::System.IntPtr hDict)
+        public static global::LittleCmsNet.CmsDICTentryStruct CmsDictGetEntryList(global::System.IntPtr hDict)
         {
             var __ret = __Internal.CmsDictGetEntryList(hDict);
-            global::LitteCmsNet.CmsDICTentryStruct __result0;
+            global::LittleCmsNet.CmsDICTentryStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsDICTentryStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsDICTentryStruct) global::LitteCmsNet.CmsDICTentryStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsDICTentryStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsDICTentryStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsDICTentryStruct) global::LittleCmsNet.CmsDICTentryStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsDICTentryStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsDICTentryStruct CmsDictNextEntry(global::LitteCmsNet.CmsDICTentryStruct e)
+        public static global::LittleCmsNet.CmsDICTentryStruct CmsDictNextEntry(global::LittleCmsNet.CmsDICTentryStruct e)
         {
             var __arg0 = ReferenceEquals(e, null) ? global::System.IntPtr.Zero : e.__Instance;
             var __ret = __Internal.CmsDictNextEntry(__arg0);
-            global::LitteCmsNet.CmsDICTentryStruct __result0;
+            global::LittleCmsNet.CmsDICTentryStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsDICTentryStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsDICTentryStruct) global::LitteCmsNet.CmsDICTentryStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsDICTentryStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsDICTentryStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsDICTentryStruct) global::LittleCmsNet.CmsDICTentryStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsDICTentryStruct.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::System.IntPtr CmsCreateProfilePlaceholder(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsCreateProfilePlaceholder(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateProfilePlaceholder(__arg0);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsContextStruct CmsGetProfileContextID(global::System.IntPtr hProfile)
+        public static global::LittleCmsNet.CmsContextStruct CmsGetProfileContextID(global::System.IntPtr hProfile)
         {
             var __ret = __Internal.CmsGetProfileContextID(hProfile);
-            global::LitteCmsNet.CmsContextStruct __result0;
+            global::LittleCmsNet.CmsContextStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsContextStruct) global::LitteCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsContextStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsContextStruct) global::LittleCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsContextStruct.__CreateInstance(__ret);
             return __result0;
         }
 
@@ -6920,49 +6920,49 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsTagSignature CmsGetTagSignature(global::System.IntPtr hProfile, uint n)
+        public static global::LittleCmsNet.CmsTagSignature CmsGetTagSignature(global::System.IntPtr hProfile, uint n)
         {
             var __ret = __Internal.CmsGetTagSignature(hProfile, n);
             return __ret;
         }
 
-        public static int CmsIsTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig)
+        public static int CmsIsTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig)
         {
             var __ret = __Internal.CmsIsTag(hProfile, sig);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsReadTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig)
+        public static global::System.IntPtr CmsReadTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig)
         {
             var __ret = __Internal.CmsReadTag(hProfile, sig);
             return __ret;
         }
 
-        public static int CmsWriteTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::System.IntPtr data)
+        public static int CmsWriteTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::System.IntPtr data)
         {
             var __ret = __Internal.CmsWriteTag(hProfile, sig, data);
             return __ret;
         }
 
-        public static int CmsLinkTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::LitteCmsNet.CmsTagSignature dest)
+        public static int CmsLinkTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::LittleCmsNet.CmsTagSignature dest)
         {
             var __ret = __Internal.CmsLinkTag(hProfile, sig, dest);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsTagSignature CmsTagLinkedTo(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig)
+        public static global::LittleCmsNet.CmsTagSignature CmsTagLinkedTo(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig)
         {
             var __ret = __Internal.CmsTagLinkedTo(hProfile, sig);
             return __ret;
         }
 
-        public static uint CmsReadRawTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::System.IntPtr Buffer, uint BufferSize)
+        public static uint CmsReadRawTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::System.IntPtr Buffer, uint BufferSize)
         {
             var __ret = __Internal.CmsReadRawTag(hProfile, sig, Buffer, BufferSize);
             return __ret;
         }
 
-        public static int CmsWriteRawTag(global::System.IntPtr hProfile, global::LitteCmsNet.CmsTagSignature sig, global::System.IntPtr data, uint Size)
+        public static int CmsWriteRawTag(global::System.IntPtr hProfile, global::LittleCmsNet.CmsTagSignature sig, global::System.IntPtr data, uint Size)
         {
             var __ret = __Internal.CmsWriteRawTag(hProfile, sig, data, Size);
             return __ret;
@@ -7042,35 +7042,35 @@ namespace LitteCmsNet
             __Internal.CmsSetHeaderRenderingIntent(hProfile, RenderingIntent);
         }
 
-        public static global::LitteCmsNet.CmsColorSpaceSignature CmsGetPCS(global::System.IntPtr hProfile)
+        public static global::LittleCmsNet.CmsColorSpaceSignature CmsGetPCS(global::System.IntPtr hProfile)
         {
             var __ret = __Internal.CmsGetPCS(hProfile);
             return __ret;
         }
 
-        public static void CmsSetPCS(global::System.IntPtr hProfile, global::LitteCmsNet.CmsColorSpaceSignature pcs)
+        public static void CmsSetPCS(global::System.IntPtr hProfile, global::LittleCmsNet.CmsColorSpaceSignature pcs)
         {
             __Internal.CmsSetPCS(hProfile, pcs);
         }
 
-        public static global::LitteCmsNet.CmsColorSpaceSignature CmsGetColorSpace(global::System.IntPtr hProfile)
+        public static global::LittleCmsNet.CmsColorSpaceSignature CmsGetColorSpace(global::System.IntPtr hProfile)
         {
             var __ret = __Internal.CmsGetColorSpace(hProfile);
             return __ret;
         }
 
-        public static void CmsSetColorSpace(global::System.IntPtr hProfile, global::LitteCmsNet.CmsColorSpaceSignature sig)
+        public static void CmsSetColorSpace(global::System.IntPtr hProfile, global::LittleCmsNet.CmsColorSpaceSignature sig)
         {
             __Internal.CmsSetColorSpace(hProfile, sig);
         }
 
-        public static global::LitteCmsNet.CmsProfileClassSignature CmsGetDeviceClass(global::System.IntPtr hProfile)
+        public static global::LittleCmsNet.CmsProfileClassSignature CmsGetDeviceClass(global::System.IntPtr hProfile)
         {
             var __ret = __Internal.CmsGetDeviceClass(hProfile);
             return __ret;
         }
 
-        public static void CmsSetDeviceClass(global::System.IntPtr hProfile, global::LitteCmsNet.CmsProfileClassSignature sig)
+        public static void CmsSetDeviceClass(global::System.IntPtr hProfile, global::LittleCmsNet.CmsProfileClassSignature sig)
         {
             __Internal.CmsSetDeviceClass(hProfile, sig);
         }
@@ -7115,19 +7115,19 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsColorSpaceSignature CmsICCcolorSpace(int OurNotation)
+        public static global::LittleCmsNet.CmsColorSpaceSignature CmsICCcolorSpace(int OurNotation)
         {
             var __ret = __Internal.CmsICCcolorSpace(OurNotation);
             return __ret;
         }
 
-        public static int CmsLCMScolorSpace(global::LitteCmsNet.CmsColorSpaceSignature ProfileSpace)
+        public static int CmsLCMScolorSpace(global::LittleCmsNet.CmsColorSpaceSignature ProfileSpace)
         {
             var __ret = __Internal.CmsLCMScolorSpace(ProfileSpace);
             return __ret;
         }
 
-        public static uint CmsChannelsOf(global::LitteCmsNet.CmsColorSpaceSignature ColorSpace)
+        public static uint CmsChannelsOf(global::LittleCmsNet.CmsColorSpaceSignature ColorSpace)
         {
             var __ret = __Internal.CmsChannelsOf(ColorSpace);
             return __ret;
@@ -7145,7 +7145,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsGetProfileInfo(global::System.IntPtr hProfile, global::LitteCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, char* Buffer, uint BufferSize)
+        public static uint CmsGetProfileInfo(global::System.IntPtr hProfile, global::LittleCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, char* Buffer, uint BufferSize)
         {
             if (LanguageCode == null || LanguageCode.Length != 3)
                 throw new ArgumentOutOfRangeException("LanguageCode", "The dimensions of the provided array don't match the required size.");
@@ -7155,7 +7155,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsGetProfileInfoASCII(global::System.IntPtr hProfile, global::LitteCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte* Buffer, uint BufferSize)
+        public static uint CmsGetProfileInfoASCII(global::System.IntPtr hProfile, global::LittleCmsNet.CmsInfoType Info, sbyte[] LanguageCode, sbyte[] CountryCode, sbyte* Buffer, uint BufferSize)
         {
             if (LanguageCode == null || LanguageCode.Length != 3)
                 throw new ArgumentOutOfRangeException("LanguageCode", "The dimensions of the provided array don't match the required size.");
@@ -7165,54 +7165,54 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsIoHandler CmsOpenIOhandlerFromFile(global::LitteCmsNet.CmsContextStruct ContextID, string FileName, string AccessMode)
+        public static global::LittleCmsNet.CmsIoHandler CmsOpenIOhandlerFromFile(global::LittleCmsNet.CmsContextStruct ContextID, string FileName, string AccessMode)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsOpenIOhandlerFromFile(__arg0, FileName, AccessMode);
-            global::LitteCmsNet.CmsIoHandler __result0;
+            global::LittleCmsNet.CmsIoHandler __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsIoHandler) global::LitteCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsIoHandler.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsIoHandler) global::LittleCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsIoHandler.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsIoHandler CmsOpenIOhandlerFromMem(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr Buffer, uint size, string AccessMode)
+        public static global::LittleCmsNet.CmsIoHandler CmsOpenIOhandlerFromMem(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr Buffer, uint size, string AccessMode)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsOpenIOhandlerFromMem(__arg0, Buffer, size, AccessMode);
-            global::LitteCmsNet.CmsIoHandler __result0;
+            global::LittleCmsNet.CmsIoHandler __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsIoHandler) global::LitteCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsIoHandler.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsIoHandler) global::LittleCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsIoHandler.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsIoHandler CmsOpenIOhandlerFromNULL(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::LittleCmsNet.CmsIoHandler CmsOpenIOhandlerFromNULL(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsOpenIOhandlerFromNULL(__arg0);
-            global::LitteCmsNet.CmsIoHandler __result0;
+            global::LittleCmsNet.CmsIoHandler __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsIoHandler) global::LitteCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsIoHandler.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsIoHandler) global::LittleCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsIoHandler.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static global::LitteCmsNet.CmsIoHandler CmsGetProfileIOhandler(global::System.IntPtr hProfile)
+        public static global::LittleCmsNet.CmsIoHandler CmsGetProfileIOhandler(global::System.IntPtr hProfile)
         {
             var __ret = __Internal.CmsGetProfileIOhandler(hProfile);
-            global::LitteCmsNet.CmsIoHandler __result0;
+            global::LittleCmsNet.CmsIoHandler __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsIoHandler) global::LitteCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsIoHandler.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsIoHandler.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsIoHandler) global::LittleCmsNet.CmsIoHandler.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsIoHandler.__CreateInstance(__ret);
             return __result0;
         }
 
-        public static int CmsCloseIOhandler(global::LitteCmsNet.CmsIoHandler io)
+        public static int CmsCloseIOhandler(global::LittleCmsNet.CmsIoHandler io)
         {
             var __arg0 = ReferenceEquals(io, null) ? global::System.IntPtr.Zero : io.__Instance;
             var __ret = __Internal.CmsCloseIOhandler(__arg0);
@@ -7231,7 +7231,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsOpenProfileFromFileTHR(global::LitteCmsNet.CmsContextStruct ContextID, string ICCProfile, string sAccess)
+        public static global::System.IntPtr CmsOpenProfileFromFileTHR(global::LittleCmsNet.CmsContextStruct ContextID, string ICCProfile, string sAccess)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsOpenProfileFromFileTHR(__arg0, ICCProfile, sAccess);
@@ -7244,14 +7244,14 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsOpenProfileFromMemTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr MemPtr, uint dwSize)
+        public static global::System.IntPtr CmsOpenProfileFromMemTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr MemPtr, uint dwSize)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsOpenProfileFromMemTHR(__arg0, MemPtr, dwSize);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsOpenProfileFromIOhandlerTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsIoHandler io)
+        public static global::System.IntPtr CmsOpenProfileFromIOhandlerTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsIoHandler io)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(io, null) ? global::System.IntPtr.Zero : io.__Instance;
@@ -7259,7 +7259,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsOpenProfileFromIOhandler2THR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsIoHandler io, int write)
+        public static global::System.IntPtr CmsOpenProfileFromIOhandler2THR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsIoHandler io, int write)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(io, null) ? global::System.IntPtr.Zero : io.__Instance;
@@ -7289,14 +7289,14 @@ namespace LitteCmsNet
             }
         }
 
-        public static uint CmsSaveProfileToIOhandler(global::System.IntPtr hProfile, global::LitteCmsNet.CmsIoHandler io)
+        public static uint CmsSaveProfileToIOhandler(global::System.IntPtr hProfile, global::LittleCmsNet.CmsIoHandler io)
         {
             var __arg1 = ReferenceEquals(io, null) ? global::System.IntPtr.Zero : io.__Instance;
             var __ret = __Internal.CmsSaveProfileToIOhandler(hProfile, __arg1);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateRGBProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsCIExyY WhitePoint, global::LitteCmsNet.CmsCIExyYTRIPLE Primaries, global::LitteCmsNet.CmsCurveStruct[] TransferFunction)
+        public static global::System.IntPtr CmsCreateRGBProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsCIExyY WhitePoint, global::LittleCmsNet.CmsCIExyYTRIPLE Primaries, global::LittleCmsNet.CmsCurveStruct[] TransferFunction)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
@@ -7320,7 +7320,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateRGBProfile(global::LitteCmsNet.CmsCIExyY WhitePoint, global::LitteCmsNet.CmsCIExyYTRIPLE Primaries, global::LitteCmsNet.CmsCurveStruct[] TransferFunction)
+        public static global::System.IntPtr CmsCreateRGBProfile(global::LittleCmsNet.CmsCIExyY WhitePoint, global::LittleCmsNet.CmsCIExyYTRIPLE Primaries, global::LittleCmsNet.CmsCurveStruct[] TransferFunction)
         {
             var __arg0 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
             var __arg1 = ReferenceEquals(Primaries, null) ? global::System.IntPtr.Zero : Primaries.__Instance;
@@ -7343,7 +7343,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateGrayProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsCIExyY WhitePoint, global::LitteCmsNet.CmsCurveStruct TransferFunction)
+        public static global::System.IntPtr CmsCreateGrayProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsCIExyY WhitePoint, global::LittleCmsNet.CmsCurveStruct TransferFunction)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
@@ -7352,7 +7352,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateGrayProfile(global::LitteCmsNet.CmsCIExyY WhitePoint, global::LitteCmsNet.CmsCurveStruct TransferFunction)
+        public static global::System.IntPtr CmsCreateGrayProfile(global::LittleCmsNet.CmsCIExyY WhitePoint, global::LittleCmsNet.CmsCurveStruct TransferFunction)
         {
             var __arg0 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
             var __arg1 = ReferenceEquals(TransferFunction, null) ? global::System.IntPtr.Zero : TransferFunction.__Instance;
@@ -7360,7 +7360,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateLinearizationDeviceLinkTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, global::LitteCmsNet.CmsCurveStruct[] TransferFunctions)
+        public static global::System.IntPtr CmsCreateLinearizationDeviceLinkTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, global::LittleCmsNet.CmsCurveStruct[] TransferFunctions)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             global::System.IntPtr[] __TransferFunctions;
@@ -7380,7 +7380,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateLinearizationDeviceLink(global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, global::LitteCmsNet.CmsCurveStruct[] TransferFunctions)
+        public static global::System.IntPtr CmsCreateLinearizationDeviceLink(global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, global::LittleCmsNet.CmsCurveStruct[] TransferFunctions)
         {
             global::System.IntPtr[] __TransferFunctions;
             if (ReferenceEquals(TransferFunctions, null))
@@ -7399,20 +7399,20 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateInkLimitingDeviceLinkTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, double Limit)
+        public static global::System.IntPtr CmsCreateInkLimitingDeviceLinkTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, double Limit)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateInkLimitingDeviceLinkTHR(__arg0, ColorSpace, Limit);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateInkLimitingDeviceLink(global::LitteCmsNet.CmsColorSpaceSignature ColorSpace, double Limit)
+        public static global::System.IntPtr CmsCreateInkLimitingDeviceLink(global::LittleCmsNet.CmsColorSpaceSignature ColorSpace, double Limit)
         {
             var __ret = __Internal.CmsCreateInkLimitingDeviceLink(ColorSpace, Limit);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateLab2ProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsCIExyY WhitePoint)
+        public static global::System.IntPtr CmsCreateLab2ProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsCIExyY WhitePoint)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
@@ -7420,14 +7420,14 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateLab2Profile(global::LitteCmsNet.CmsCIExyY WhitePoint)
+        public static global::System.IntPtr CmsCreateLab2Profile(global::LittleCmsNet.CmsCIExyY WhitePoint)
         {
             var __arg0 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
             var __ret = __Internal.CmsCreateLab2Profile(__arg0);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateLab4ProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsCIExyY WhitePoint)
+        public static global::System.IntPtr CmsCreateLab4ProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsCIExyY WhitePoint)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg1 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
@@ -7435,14 +7435,14 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateLab4Profile(global::LitteCmsNet.CmsCIExyY WhitePoint)
+        public static global::System.IntPtr CmsCreateLab4Profile(global::LittleCmsNet.CmsCIExyY WhitePoint)
         {
             var __arg0 = ReferenceEquals(WhitePoint, null) ? global::System.IntPtr.Zero : WhitePoint.__Instance;
             var __ret = __Internal.CmsCreateLab4Profile(__arg0);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateXYZProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsCreateXYZProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateXYZProfileTHR(__arg0);
@@ -7455,7 +7455,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateSRGBProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsCreateSRGBProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateSRGBProfileTHR(__arg0);
@@ -7468,7 +7468,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateBCHSWabstractProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID, uint nLUTPoints, double Bright, double Contrast, double Hue, double Saturation, uint TempSrc, uint TempDest)
+        public static global::System.IntPtr CmsCreateBCHSWabstractProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID, uint nLUTPoints, double Bright, double Contrast, double Hue, double Saturation, uint TempSrc, uint TempDest)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateBCHSWabstractProfileTHR(__arg0, nLUTPoints, Bright, Contrast, Hue, Saturation, TempSrc, TempDest);
@@ -7481,7 +7481,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateNULLProfileTHR(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsCreateNULLProfileTHR(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateNULLProfileTHR(__arg0);
@@ -7510,7 +7510,7 @@ namespace LitteCmsNet
             }
         }
 
-        public static uint CmsGetSupportedIntentsTHR(global::LitteCmsNet.CmsContextStruct ContextID, uint nMax, ref uint Codes, sbyte** Descriptions)
+        public static uint CmsGetSupportedIntentsTHR(global::LittleCmsNet.CmsContextStruct ContextID, uint nMax, ref uint Codes, sbyte** Descriptions)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             fixed (uint* __Codes2 = &Codes)
@@ -7521,7 +7521,7 @@ namespace LitteCmsNet
             }
         }
 
-        public static global::System.IntPtr CmsCreateTransformTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr Input, uint InputFormat, global::System.IntPtr Output, uint OutputFormat, uint Intent, uint dwFlags)
+        public static global::System.IntPtr CmsCreateTransformTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr Input, uint InputFormat, global::System.IntPtr Output, uint OutputFormat, uint Intent, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateTransformTHR(__arg0, Input, InputFormat, Output, OutputFormat, Intent, dwFlags);
@@ -7534,7 +7534,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateProofingTransformTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr Input, uint InputFormat, global::System.IntPtr Output, uint OutputFormat, global::System.IntPtr Proofing, uint Intent, uint ProofingIntent, uint dwFlags)
+        public static global::System.IntPtr CmsCreateProofingTransformTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr Input, uint InputFormat, global::System.IntPtr Output, uint OutputFormat, global::System.IntPtr Proofing, uint Intent, uint ProofingIntent, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateProofingTransformTHR(__arg0, Input, InputFormat, Output, OutputFormat, Proofing, Intent, ProofingIntent, dwFlags);
@@ -7547,7 +7547,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateMultiprofileTransformTHR(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr[] hProfiles, uint nProfiles, uint InputFormat, uint OutputFormat, uint Intent, uint dwFlags)
+        public static global::System.IntPtr CmsCreateMultiprofileTransformTHR(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr[] hProfiles, uint nProfiles, uint InputFormat, uint OutputFormat, uint Intent, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateMultiprofileTransformTHR(__arg0, hProfiles, nProfiles, InputFormat, OutputFormat, Intent, dwFlags);
@@ -7560,7 +7560,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsCreateExtendedTransform(global::LitteCmsNet.CmsContextStruct ContextID, uint nProfiles, global::System.IntPtr[] hProfiles, int[] BPC, uint[] Intents, double[] AdaptationStates, global::System.IntPtr hGamutProfile, uint nGamutPCSposition, uint InputFormat, uint OutputFormat, uint dwFlags)
+        public static global::System.IntPtr CmsCreateExtendedTransform(global::LittleCmsNet.CmsContextStruct ContextID, uint nProfiles, global::System.IntPtr[] hProfiles, int[] BPC, uint[] Intents, double[] AdaptationStates, global::System.IntPtr hGamutProfile, uint nGamutPCSposition, uint InputFormat, uint OutputFormat, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsCreateExtendedTransform(__arg0, nProfiles, hProfiles, BPC, Intents, AdaptationStates, hGamutProfile, nGamutPCSposition, InputFormat, OutputFormat, dwFlags);
@@ -7601,7 +7601,7 @@ namespace LitteCmsNet
             __Internal.CmsGetAlarmCodes(NewAlarm);
         }
 
-        public static void CmsSetAlarmCodesTHR(global::LitteCmsNet.CmsContextStruct ContextID, ushort[] AlarmCodes)
+        public static void CmsSetAlarmCodesTHR(global::LittleCmsNet.CmsContextStruct ContextID, ushort[] AlarmCodes)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             if (AlarmCodes == null || AlarmCodes.Length != 16)
@@ -7609,7 +7609,7 @@ namespace LitteCmsNet
             __Internal.CmsSetAlarmCodesTHR(__arg0, AlarmCodes);
         }
 
-        public static void CmsGetAlarmCodesTHR(global::LitteCmsNet.CmsContextStruct ContextID, ushort[] AlarmCodes)
+        public static void CmsGetAlarmCodesTHR(global::LittleCmsNet.CmsContextStruct ContextID, ushort[] AlarmCodes)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             if (AlarmCodes == null || AlarmCodes.Length != 16)
@@ -7623,21 +7623,21 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static double CmsSetAdaptationStateTHR(global::LitteCmsNet.CmsContextStruct ContextID, double d)
+        public static double CmsSetAdaptationStateTHR(global::LittleCmsNet.CmsContextStruct ContextID, double d)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsSetAdaptationStateTHR(__arg0, d);
             return __ret;
         }
 
-        public static global::LitteCmsNet.CmsContextStruct CmsGetTransformContextID(global::System.IntPtr hTransform)
+        public static global::LittleCmsNet.CmsContextStruct CmsGetTransformContextID(global::System.IntPtr hTransform)
         {
             var __ret = __Internal.CmsGetTransformContextID(hTransform);
-            global::LitteCmsNet.CmsContextStruct __result0;
+            global::LittleCmsNet.CmsContextStruct __result0;
             if (__ret == IntPtr.Zero) __result0 = null;
-            else if (global::LitteCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
-                __result0 = (global::LitteCmsNet.CmsContextStruct) global::LitteCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
-            else __result0 = global::LitteCmsNet.CmsContextStruct.__CreateInstance(__ret);
+            else if (global::LittleCmsNet.CmsContextStruct.NativeToManagedMap.ContainsKey(__ret))
+                __result0 = (global::LittleCmsNet.CmsContextStruct) global::LittleCmsNet.CmsContextStruct.NativeToManagedMap[__ret];
+            else __result0 = global::LittleCmsNet.CmsContextStruct.__CreateInstance(__ret);
             return __result0;
         }
 
@@ -7659,7 +7659,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsGetPostScriptColorResource(global::LitteCmsNet.CmsContextStruct ContextID, global::LitteCmsNet.CmsPSResourceType Type, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::LitteCmsNet.CmsIoHandler io)
+        public static uint CmsGetPostScriptColorResource(global::LittleCmsNet.CmsContextStruct ContextID, global::LittleCmsNet.CmsPSResourceType Type, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::LittleCmsNet.CmsIoHandler io)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __arg5 = ReferenceEquals(io, null) ? global::System.IntPtr.Zero : io.__Instance;
@@ -7667,21 +7667,21 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static uint CmsGetPostScriptCSA(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::System.IntPtr Buffer, uint dwBufferLen)
+        public static uint CmsGetPostScriptCSA(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::System.IntPtr Buffer, uint dwBufferLen)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsGetPostScriptCSA(__arg0, hProfile, Intent, dwFlags, Buffer, dwBufferLen);
             return __ret;
         }
 
-        public static uint CmsGetPostScriptCRD(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::System.IntPtr Buffer, uint dwBufferLen)
+        public static uint CmsGetPostScriptCRD(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr hProfile, uint Intent, uint dwFlags, global::System.IntPtr Buffer, uint dwBufferLen)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsGetPostScriptCRD(__arg0, hProfile, Intent, dwFlags, Buffer, dwBufferLen);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsIT8Alloc(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsIT8Alloc(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsIT8Alloc(__arg0);
@@ -7705,14 +7705,14 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static global::System.IntPtr CmsIT8LoadFromFile(global::LitteCmsNet.CmsContextStruct ContextID, string cFileName)
+        public static global::System.IntPtr CmsIT8LoadFromFile(global::LittleCmsNet.CmsContextStruct ContextID, string cFileName)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsIT8LoadFromFile(__arg0, cFileName);
             return __ret;
         }
 
-        public static global::System.IntPtr CmsIT8LoadFromMem(global::LitteCmsNet.CmsContextStruct ContextID, global::System.IntPtr Ptr, uint len)
+        public static global::System.IntPtr CmsIT8LoadFromMem(global::LittleCmsNet.CmsContextStruct ContextID, global::System.IntPtr Ptr, uint len)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsIT8LoadFromMem(__arg0, Ptr, len);
@@ -7908,7 +7908,7 @@ namespace LitteCmsNet
             __Internal.CmsIT8DefineDblFormat(hIT8, Formatter);
         }
 
-        public static global::System.IntPtr CmsGBDAlloc(global::LitteCmsNet.CmsContextStruct ContextID)
+        public static global::System.IntPtr CmsGBDAlloc(global::LittleCmsNet.CmsContextStruct ContextID)
         {
             var __arg0 = ReferenceEquals(ContextID, null) ? global::System.IntPtr.Zero : ContextID.__Instance;
             var __ret = __Internal.CmsGBDAlloc(__arg0);
@@ -7920,7 +7920,7 @@ namespace LitteCmsNet
             __Internal.CmsGBDFree(hGBD);
         }
 
-        public static int CmsGDBAddPoint(global::System.IntPtr hGBD, global::LitteCmsNet.CmsCIELab Lab)
+        public static int CmsGDBAddPoint(global::System.IntPtr hGBD, global::LittleCmsNet.CmsCIELab Lab)
         {
             var __arg1 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
             var __ret = __Internal.CmsGDBAddPoint(hGBD, __arg1);
@@ -7933,21 +7933,21 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsGDBCheckPoint(global::System.IntPtr hGBD, global::LitteCmsNet.CmsCIELab Lab)
+        public static int CmsGDBCheckPoint(global::System.IntPtr hGBD, global::LittleCmsNet.CmsCIELab Lab)
         {
             var __arg1 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
             var __ret = __Internal.CmsGDBCheckPoint(hGBD, __arg1);
             return __ret;
         }
 
-        public static int CmsDetectBlackPoint(global::LitteCmsNet.CmsCIEXYZ BlackPoint, global::System.IntPtr hProfile, uint Intent, uint dwFlags)
+        public static int CmsDetectBlackPoint(global::LittleCmsNet.CmsCIEXYZ BlackPoint, global::System.IntPtr hProfile, uint Intent, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(BlackPoint, null) ? global::System.IntPtr.Zero : BlackPoint.__Instance;
             var __ret = __Internal.CmsDetectBlackPoint(__arg0, hProfile, Intent, dwFlags);
             return __ret;
         }
 
-        public static int CmsDetectDestinationBlackPoint(global::LitteCmsNet.CmsCIEXYZ BlackPoint, global::System.IntPtr hProfile, uint Intent, uint dwFlags)
+        public static int CmsDetectDestinationBlackPoint(global::LittleCmsNet.CmsCIEXYZ BlackPoint, global::System.IntPtr hProfile, uint Intent, uint dwFlags)
         {
             var __arg0 = ReferenceEquals(BlackPoint, null) ? global::System.IntPtr.Zero : BlackPoint.__Instance;
             var __ret = __Internal.CmsDetectDestinationBlackPoint(__arg0, hProfile, Intent, dwFlags);
@@ -7960,7 +7960,7 @@ namespace LitteCmsNet
             return __ret;
         }
 
-        public static int CmsDesaturateLab(global::LitteCmsNet.CmsCIELab Lab, double amax, double amin, double bmax, double bmin)
+        public static int CmsDesaturateLab(global::LittleCmsNet.CmsCIELab Lab, double amax, double amin, double bmax, double bmin)
         {
             var __arg0 = ReferenceEquals(Lab, null) ? global::System.IntPtr.Zero : Lab.__Instance;
             var __ret = __Internal.CmsDesaturateLab(__arg0, amax, amin, bmax, bmin);

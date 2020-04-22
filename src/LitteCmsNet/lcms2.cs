@@ -1425,7 +1425,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->date = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsDateTimeNumber.__Internal() : *(global::LitteCmsNet.CmsDateTimeNumber.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->date = *(global::LitteCmsNet.CmsDateTimeNumber.__Internal*) value.__Instance;
             }
         }
 
@@ -1529,7 +1531,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->illuminant = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsEncodedXYZNumber.__Internal() : *(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsICCHeader.__Internal*)__Instance)->illuminant = *(global::LitteCmsNet.CmsEncodedXYZNumber.__Internal*) value.__Instance;
             }
         }
 
@@ -2588,7 +2592,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Red = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIEXYZ.__Internal() : *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Red = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -2601,7 +2607,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Green = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIEXYZ.__Internal() : *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Green = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -2614,7 +2622,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Blue = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIEXYZ.__Internal() : *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsCIEXYZTRIPLE.__Internal*)__Instance)->Blue = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
     }
@@ -2718,7 +2728,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Red = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIExyY.__Internal() : *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Red = *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
             }
         }
 
@@ -2731,7 +2743,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Green = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIExyY.__Internal() : *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Green = *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
             }
         }
 
@@ -2744,7 +2758,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Blue = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIExyY.__Internal() : *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsCIExyYTRIPLE.__Internal*)__Instance)->Blue = *(global::LitteCmsNet.CmsCIExyY.__Internal*) value.__Instance;
             }
         }
     }
@@ -2867,7 +2883,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Backing = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIEXYZ.__Internal() : *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsICCMeasurementConditions.__Internal*)__Instance)->Backing = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -3010,7 +3028,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->IlluminantXYZ = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIEXYZ.__Internal() : *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->IlluminantXYZ = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -3023,7 +3043,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->SurroundXYZ = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIEXYZ.__Internal() : *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsICCViewingConditions.__Internal*)__Instance)->SurroundXYZ = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -3146,7 +3168,9 @@ namespace LitteCmsNet
 
             set
             {
-                ((global::LitteCmsNet.CmsViewingConditions.__Internal*)__Instance)->whitePoint = ReferenceEquals(value, null) ? new global::LitteCmsNet.CmsCIEXYZ.__Internal() : *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
+                if (ReferenceEquals(value, null))
+                    throw new global::System.ArgumentNullException("value", "Cannot be null because it is passed by value.");
+                ((global::LitteCmsNet.CmsViewingConditions.__Internal*)__Instance)->whitePoint = *(global::LitteCmsNet.CmsCIEXYZ.__Internal*) value.__Instance;
             }
         }
 
@@ -6384,7 +6408,8 @@ namespace LitteCmsNet
         public static void CmsPipelineUnlinkStage(global::LitteCmsNet.CmsPipelineStruct lut, global::LitteCmsNet.CmsStageLoc loc, global::LitteCmsNet.CmsStageStruct mpe)
         {
             var __arg0 = ReferenceEquals(lut, null) ? global::System.IntPtr.Zero : lut.__Instance;
-            var __arg2 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
+            var ____arg2 = ReferenceEquals(mpe, null) ? global::System.IntPtr.Zero : mpe.__Instance;
+            var __arg2 = new global::System.IntPtr(&____arg2);
             __Internal.CmsPipelineUnlinkStage(__arg0, loc, __arg2);
         }
 
@@ -7713,7 +7738,7 @@ namespace LitteCmsNet
         public static string CmsIT8GetSheetType(global::System.IntPtr hIT8)
         {
             var __ret = __Internal.CmsIT8GetSheetType(hIT8);
-            return Marshal.PtrToStringAnsi((global::System.IntPtr) __ret);
+            return Marshal.PtrToStringAnsi(__ret);
         }
 
         public static int CmsIT8SetSheetType(global::System.IntPtr hIT8, string Type)
@@ -7761,7 +7786,7 @@ namespace LitteCmsNet
         public static string CmsIT8GetProperty(global::System.IntPtr hIT8, string cProp)
         {
             var __ret = __Internal.CmsIT8GetProperty(hIT8, cProp);
-            return Marshal.PtrToStringAnsi((global::System.IntPtr) __ret);
+            return Marshal.PtrToStringAnsi(__ret);
         }
 
         public static double CmsIT8GetPropertyDbl(global::System.IntPtr hIT8, string cProp)
@@ -7773,7 +7798,7 @@ namespace LitteCmsNet
         public static string CmsIT8GetPropertyMulti(global::System.IntPtr hIT8, string Key, string SubKey)
         {
             var __ret = __Internal.CmsIT8GetPropertyMulti(hIT8, Key, SubKey);
-            return Marshal.PtrToStringAnsi((global::System.IntPtr) __ret);
+            return Marshal.PtrToStringAnsi(__ret);
         }
 
         public static uint CmsIT8EnumProperties(global::System.IntPtr hIT8, sbyte*** PropertyNames)
@@ -7791,7 +7816,7 @@ namespace LitteCmsNet
         public static string CmsIT8GetDataRowCol(global::System.IntPtr hIT8, int row, int col)
         {
             var __ret = __Internal.CmsIT8GetDataRowCol(hIT8, row, col);
-            return Marshal.PtrToStringAnsi((global::System.IntPtr) __ret);
+            return Marshal.PtrToStringAnsi(__ret);
         }
 
         public static double CmsIT8GetDataRowColDbl(global::System.IntPtr hIT8, int row, int col)
@@ -7815,7 +7840,7 @@ namespace LitteCmsNet
         public static string CmsIT8GetData(global::System.IntPtr hIT8, string cPatch, string cSample)
         {
             var __ret = __Internal.CmsIT8GetData(hIT8, cPatch, cSample);
-            return Marshal.PtrToStringAnsi((global::System.IntPtr) __ret);
+            return Marshal.PtrToStringAnsi(__ret);
         }
 
         public static double CmsIT8GetDataDbl(global::System.IntPtr hIT8, string cPatch, string cSample)
@@ -7857,7 +7882,7 @@ namespace LitteCmsNet
         public static string CmsIT8GetPatchName(global::System.IntPtr hIT8, int nPatch, sbyte* buffer)
         {
             var __ret = __Internal.CmsIT8GetPatchName(hIT8, nPatch, buffer);
-            return Marshal.PtrToStringAnsi((global::System.IntPtr) __ret);
+            return Marshal.PtrToStringAnsi(__ret);
         }
 
         public static int CmsIT8GetPatchByName(global::System.IntPtr hIT8, string cPatch)

@@ -3,9 +3,9 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<Authors>Alexander Mehling</Authors>
-		<Version>0.1.0</Version>
+		<Version>0.2.0</Version>
 		<Company />
-		<Copyright>(c) 2019 Alexander Mehling</Copyright>
+		<Copyright>(c) 2019-2020 Alexander Mehling</Copyright>
 		<Platforms>AnyCPU</Platforms>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<PackageId>LittleCmsNet</PackageId>
@@ -13,8 +13,21 @@
 		<IncludeSymbols>true</IncludeSymbols>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<Content Include="build\net461\LittleCmsNet.targets">
+			<PackagePath>build/net461/LittleCmsNet.targets</PackagePath>
+		</Content>
+		<Content Include="buildTransitive\net461\LittleCmsNet.targets">
+			<PackagePath>buildTransitive/net461/LittleCmsNet.targets</PackagePath>
+		</Content>
+	</ItemGroup>
+
 	<PropertyGroup>
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(PackageId).xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <NoWarn>1701;1702;1591</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>

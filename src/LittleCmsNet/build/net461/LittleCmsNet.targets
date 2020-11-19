@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+	<!-- if ShouldIncludeNativeLittleCmsNet == False then don't include the native libLittleCmsNet -->
+	<PropertyGroup>
+		<ShouldIncludeNativeLittleCmsNet Condition=" '$(ShouldIncludeNativeLittleCmsNet)' == '' ">True</ShouldIncludeNativeLittleCmsNet>
+	</PropertyGroup>
+
+	<!-- get the preferred architecture -->
+	<PropertyGroup>
+		<!-- handle VS 2017 live unit testing -->
+		<PreferredNativeLittleCmsNet Condition=" '$(PreferredNativeLittleCmsNet)' == '' and '$(BuildingForLiveUnitTesting)' == 'true' and '$(PlatformTarget)' == '' ">x86</PreferredNativeLittleCmsNet>
+
+		<!-- handle x86/x64 specifically -->
+		<PreferredNativeLittleCmsNet Condition=" '$(PreferredNativeLittleCmsNet)' == '' and ( '$(PlatformTarget)' == 'x64' or '$(PlatformTarget)' == 'x86' ) ">$(PlatformTarget)</PreferredNativeLittleCmsNet>
+		<!-- handle Any CPU, considering Prefer32Bit - but only on Windows as macOS and Linux ignore this flag -->
+		<PreferredNativeLittleCmsNet Condition=" '$(PreferredNativeLittleCmsNet)' == '' and '$(OS)' != 'Unix' and '$(Prefer32Bit)' == 'False' ">x64</PreferredNativeLittleCmsNet>
+		<PreferredNativeLittleCmsNet Condition=" '$(PreferredNativeLittleCmsNet)' == '' and '$(OS)' != 'Unix' and '$(Prefer32Bit)' == 'True' ">x86</PreferredNativeLittleCmsNet>
+		<!-- fall back to x64 on 64-bit machines -->
+		<PreferredNativeLittleCmsNet Condition=" '$(PreferredNativeLittleCmsNet)' == '' and '$(MSBuildRuntimeType)' != 'Core' and '$([System.Environment]::Is64BitOperatingSystem)' == 'True' ">x64</PreferredNativeLittleCmsNet>
+		<PreferredNativeLittleCmsNet Condition=" '$(PreferredNativeLittleCmsNet)' == '' and '$(MSBuildRuntimeType)' == 'Core' and '$([System.Runtime.InteropServices.RuntimeInformation]::OSArchitecture)' == 'X64' ">x64</PreferredNativeLittleCmsNet>
+		<!-- fall back to x86 -->
+		<PreferredNativeLittleCmsNet Condition=" '$(PreferredNativeLittleCmsNet)' == '' ">x86</PreferredNativeLittleCmsNet>
+	</PropertyGroup>
+
+	<!-- get the preferred paths -->
+	<PropertyGroup>
+		<PreferredWindowsNativeLittleCmsNetPath>$(MSBuildThisFileDirectory)..\..\runtimes\win-$(PreferredNativeLittleCmsNet)\native\lcms2.dll</PreferredWindowsNativeLittleCmsNetPath>
+	</PropertyGroup>
+
+	<ItemGroup Condition=" '$(ShouldIncludeNativeLittleCmsNet)' != 'False' ">
+		<None Include="$(PreferredWindowsNativeLittleCmsNetPath)" Condition=" Exists('$(PreferredWindowsNativeLittleCmsNetPath)') ">
+			<Visible>false</Visible>
+			<Link>$([System.IO.Path]::GetFilename('$(PreferredWindowsNativeLittleCmsNetPath)'))</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
